@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: bizzsoft
+    runtime: python
+    plan: free
+    buildCommand: ./build.sh
+    startCommand: gunicorn bizzsoft.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.13.7
