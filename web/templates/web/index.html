@@ -4,151 +4,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizzSoft | Tecnología, negocios y gestión pública</title>
+    <title>BizzSoft | Negocios, tecnología y gestión pública</title>
+    <meta name="description" content="BizzSoft ayuda a descubrir oportunidades de negocio, aumentar ventas, automatizar procesos y mejorar instituciones con tecnología.">
     <link rel="stylesheet" href="{% static 'web/css/estilos.css' %}">
 </head>
 <body>
-
 <header class="header">
     <nav class="navbar">
         <a class="marca" href="#inicio">
             <img class="logo-header" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="Logo BizzSoft">
-            <span class="nombre-marca">BizzSoft</span>
+            <span>BizzSoft</span>
         </a>
-
         <div class="menu">
             <a href="#inicio">Inicio</a>
+            <a href="#emprender">Emprender</a>
             <a href="#soluciones">Soluciones</a>
             <a href="#empresas">Empresas</a>
             <a href="#estado">Entidades públicas</a>
-            <a href="#seguridad">Ciberseguridad</a>
-            <a href="#politicas">Políticas públicas</a>
             <a href="#contacto">Contacto</a>
         </div>
-
-        <a class="boton-principal" href="#contacto">Cotiza tu proyecto</a>
+        <a class="boton-cotizar" href="#contacto">Cotiza tu proyecto</a>
     </nav>
 </header>
 
 <main>
-    <section class="hero" id="inicio">
-        <img class="logo-hero" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
+<section class="hero" id="inicio">
+    <img class="logo-hero" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
+    <p class="etiqueta">NEGOCIOS • TECNOLOGÍA • INNOVACIÓN</p>
+    <h1>Tecnología e inteligencia para <span>crear y potenciar negocios</span></h1>
+    <p class="hero-descripcion">
+        Te ayudamos a descubrir oportunidades de negocio, validar ideas, conseguir clientes,
+        aumentar ventas, automatizar procesos y mejorar organizaciones.
+    </p>
 
-        <p class="eyebrow">NEGOCIOS • TECNOLOGÍA • INNOVACIÓN</p>
+    <div class="asistente-box">
+        <div id="chat" class="chat">
+            <div class="mensaje bot">
+                <strong>BizzSoft:</strong>
+                Cuéntame qué quieres lograr. Por ejemplo: “quiero iniciar un negocio pero no sé cuál”.
+            </div>
+        </div>
 
-        <h1>
-            Soluciones digitales que
-            <span>potencian resultados</span>
-        </h1>
-
-        <p class="hero-texto">
-            Ayudamos a empresas e instituciones a crecer, aumentar ventas,
-            automatizar procesos, potenciar a sus equipos y utilizar la tecnología
-            para generar mejores resultados.
-        </p>
+        <div id="chips" class="chips">
+            <button data-texto="quiero iniciar un negocio pero no sé cuál">Quiero iniciar un negocio</button>
+            <button data-texto="quiero aumentar las ventas de mi negocio">Aumentar ventas</button>
+            <button data-texto="quiero automatizar procesos">Automatizar procesos</button>
+        </div>
 
         <div class="buscador">
-            <input id="consulta" type="text"
-                   placeholder="¿Qué necesitas mejorar en tu negocio o institución?">
-            <button id="btnBuscar" type="button">Buscar</button>
+            <input id="consulta" type="text" placeholder="Escribe tu necesidad...">
+            <button id="btnBuscar" type="button">Preguntar</button>
         </div>
+    </div>
 
-        <div id="resultadoIA" class="resultado-ia"></div>
+    <p class="frase-marca">Pasión por los negocios • Servicio al ciudadano • Compromiso con el Perú</p>
+</section>
 
-        <p class="proposito-corto">
-            Pasión por los negocios • Servicio al ciudadano • Compromiso con el Perú
+<section class="seccion" id="emprender">
+    <div class="titulo-seccion">
+        <p class="etiqueta">QUIERO EMPRENDER</p>
+        <h2>¿Quieres hacer negocios pero <span>no sabes por dónde empezar?</span></h2>
+        <p>
+            BizzSoft puede ayudarte a ordenar tus opciones según capital, tiempo, tipo de cliente
+            y forma de vender. La idea no es adivinar un negocio ganador, sino encontrar opciones
+            que merezcan ser validadas antes de invertir.
         </p>
-    </section>
+    </div>
 
-    <section class="seccion" id="soluciones">
-        <p class="eyebrow">NUESTRAS SOLUCIONES</p>
-        <h2>Tecnología para generar resultados reales</h2>
+    <div class="pasos">
+        <div><strong>01</strong><h3>Perfil</h3><p>Capital, experiencia, tiempo y preferencias.</p></div>
+        <div><strong>02</strong><h3>Oportunidades</h3><p>Ideas alineadas con tu situación.</p></div>
+        <div><strong>03</strong><h3>Validación</h3><p>Demanda, competencia, precios y clientes potenciales.</p></div>
+        <div><strong>04</strong><h3>Plan inicial</h3><p>Primeros pasos antes de invertir fuerte.</p></div>
+    </div>
 
-        <div class="grid">
-            <article class="card">
-                <h3>Aumentar ventas</h3>
-                <p>Generación de leads, automatización comercial y análisis de oportunidades.</p>
-            </article>
+    <div class="centrar">
+        <button class="boton-secundario" data-pregunta="quiero iniciar un negocio pero no sé cuál">
+            Analizar qué negocio podría iniciar
+        </button>
+    </div>
+</section>
 
-            <article class="card">
-                <h3>Automatización</h3>
-                <p>Procesos más rápidos, simples y eficientes para ahorrar tiempo y recursos.</p>
-            </article>
+<section class="seccion" id="soluciones">
+    <div class="titulo-seccion">
+        <p class="etiqueta">SOLUCIONES BIZZSOFT</p>
+        <h2>De la idea al <span>resultado</span></h2>
+    </div>
+    <div class="grid-soluciones">
+        <article class="card"><div class="card-icono">↗</div><h3>Aumentar ventas</h3><p>Leads, automatización comercial y análisis de oportunidades.</p></article>
+        <article class="card"><div class="card-icono">⚙</div><h3>Automatización</h3><p>Procesos más rápidos y eficientes con tecnología.</p></article>
+        <article class="card"><div class="card-icono">👥</div><h3>Potenciar al personal</h3><p>Capacitación, productividad y herramientas digitales.</p></article>
+        <article class="card"><div class="card-icono">🛡</div><h3>Ciberseguridad</h3><p>Riesgos, vulnerabilidades y prevención de amenazas.</p></article>
+    </div>
+</section>
 
-            <article class="card">
-                <h3>Potenciar al personal</h3>
-                <p>Capacitación y herramientas digitales para mejorar productividad y desempeño.</p>
-            </article>
+<section class="sectores">
+    <article class="sector empresas" id="empresas">
+        <p class="etiqueta">EMPRESAS</p>
+        <h2>Ayudamos a <span>hacer crecer negocios</span></h2>
+        <p>Tecnología y estrategia para conseguir clientes, mejorar procesos y tomar mejores decisiones.</p>
+        <ul>
+            <li>Generación de oportunidades comerciales</li>
+            <li>Automatización de ventas</li>
+            <li>Desarrollo de sistemas</li>
+            <li>Análisis de información</li>
+            <li>Capacitación del personal</li>
+        </ul>
+    </article>
 
-            <article class="card">
-                <h3>Ciberseguridad</h3>
-                <p>Prevención, análisis de riesgos y fortalecimiento frente a amenazas digitales.</p>
-            </article>
+    <article class="sector estado" id="estado">
+        <p class="etiqueta etiqueta-blanca">ENTIDADES PÚBLICAS</p>
+        <h2>Tecnología para <strong>servir mejor al ciudadano</strong></h2>
+        <p>Mejora de procesos, digitalización, indicadores y fortalecimiento del personal.</p>
+        <ul>
+            <li>Modernización de procesos</li>
+            <li>Automatización de trámites</li>
+            <li>Mejora del servicio al ciudadano</li>
+            <li>Indicadores de gestión</li>
+            <li>Políticas públicas basadas en evidencia</li>
+        </ul>
+    </article>
+</section>
+
+<section class="contacto-wrap" id="contacto">
+    <div class="titulo-seccion">
+        <p class="etiqueta">CONTACTO</p>
+        <h2>Convirtamos tu necesidad en <span>una oportunidad</span></h2>
+        <p>Déjanos tus datos y cuéntanos brevemente qué necesitas.</p>
+    </div>
+
+    <form id="leadForm" class="lead-form">
+        <div class="dos-columnas">
+            <label>Nombre*
+                <input name="nombre" required placeholder="Tu nombre">
+            </label>
+            <label>Empresa o proyecto
+                <input name="empresa" placeholder="Opcional">
+            </label>
+            <label>Correo
+                <input name="email" type="email" placeholder="tu@correo.com">
+            </label>
+            <label>Teléfono / WhatsApp
+                <input name="telefono" placeholder="+51 ...">
+            </label>
         </div>
-    </section>
-
-    <section class="doble">
-        <article class="panel" id="empresas">
-            <p class="eyebrow">PARA EMPRESAS</p>
-            <h2>Hacemos crecer tu negocio</h2>
-            <p>
-                Combinamos tecnología, análisis y estrategia para ayudarte a vender más,
-                trabajar mejor y tomar decisiones con información.
-            </p>
-        </article>
-
-        <article class="panel rojo" id="estado">
-            <p class="eyebrow blanco">PARA ENTIDADES PÚBLICAS</p>
-            <h2>Tecnología para un Estado más eficiente</h2>
-            <p>
-                Soluciones para mejorar procesos, fortalecer al personal
-                y brindar mejores servicios al ciudadano.
-            </p>
-        </article>
-    </section>
-
-    <section class="seccion" id="politicas">
-        <p class="eyebrow">POLÍTICAS PÚBLICAS</p>
-        <h2>Datos y evidencia para mejores decisiones</h2>
-        <p class="texto-centro">
-            Investigación, análisis y propuestas orientadas a resolver problemas públicos,
-            mejorar instituciones y generar mejores resultados para el ciudadano.
-        </p>
-    </section>
-
-    <section class="seguridad" id="seguridad">
-        <div>
-            <p class="eyebrow blanco">CIBERSEGURIDAD</p>
-            <h2>Prevención del delito cibernético</h2>
-            <p>
-                Evaluación de vulnerabilidades, análisis de riesgos, protección de información
-                y capacitación preventiva.
-            </p>
-        </div>
-    </section>
-
-    <section class="proposito">
-        <img class="logo-proposito" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
-        <h2>
-            Pasión por los negocios.<br>
-            Tecnología para transformar.<br>
-            <span>Compromiso con el Perú.</span>
-        </h2>
-    </section>
-
-    <section class="cta" id="contacto">
-        <div>
-            <p>¿Tienes un problema que quieres resolver?</p>
-            <h2>Convirtámoslo en una solución.</h2>
-        </div>
-        <a href="mailto:contacto@bizzsoft.pe">Cuéntanos tu proyecto</a>
-    </section>
+        <label>¿Qué necesitas?*
+            <textarea name="necesidad" required rows="5" placeholder="Ejemplo: quiero iniciar un negocio, aumentar ventas o automatizar un proceso"></textarea>
+        </label>
+        <button type="submit">Enviar solicitud</button>
+        <p id="leadEstado" class="lead-estado"></p>
+    </form>
+</section>
 </main>
 
 <footer>
     <div class="footer-marca">
         <img src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
-        <p>Tecnología, estrategia e innovación para empresas e instituciones.</p>
+        <div><h3>BizzSoft</h3><p>Tecnología, negocios y gestión pública.</p></div>
     </div>
     <p>© 2026 BizzSoft • Perú</p>
 </footer>

@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path("", views.inicio, name="inicio"),
-    path("api/recomendar/", views.recomendar, name="recomendar"),
+    path("api/asistente/", views.asistente, name="asistente"),
+    path("api/lead/", views.captar_lead, name="captar_lead"),
 ]

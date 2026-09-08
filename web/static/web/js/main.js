@@ -1,6 +1,11 @@
 const input = document.getElementById("consulta");
 const boton = document.getElementById("btnBuscar");
-const salida = document.getElementById("resultadoIA");
+const chat = document.getElementById("chat");
+const chips = document.getElementById("chips");
+const leadForm = document.getElementById("leadForm");
+const leadEstado = document.getElementById("leadEstado");
+
+let estadoAsistente = {};
 
 function obtenerCookie(nombre) {
     const cookies = document.cookie ? document.cookie.split(";") : [];
@@ -13,48 +18,101 @@ function obtenerCookie(nombre) {
     return "";
 }
 
-async function buscarSolucion() {
-    const consulta = input.value.trim();
+function agregarMensaje(tipo, html) {
+    const div = document.createElement("div");
+    div.className = `mensaje ${tipo}`;
+    div.innerHTML = html;
+    chat.appendChild(div);
+    chat.scrollTop = chat.scrollHeight;
+}
+
+function pintarOpciones(opciones = []) {
+    chips.innerHTML = "";
+    opciones.forEach(opcion => {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.textContent = opcion;
+        b.addEventListener("click", () => enviarConsulta(opcion));
+        chips.appendChild(b);
+    });
+}
+
+async function enviarConsulta(textoManual = null) {
+    const consulta = (textoManual ?? input.value).trim();
     if (!consulta) return;
 
+    agregarMensaje("user", `<strong>Tú:</strong> ${consulta}`);
+    input.value = "";
     boton.disabled = true;
     boton.textContent = "Analizando...";
 
     try {
-        const respuesta = await fetch("/api/recomendar/", {
+        const respuesta = await fetch("/api/asistente/", {
             method: "POST",
             credentials: "same-origin",
             headers: {
                 "Content-Type": "application/json",
                 "X-CSRFToken": obtenerCookie("csrftoken")
             },
-            body: JSON.stringify({consulta})
+            body: JSON.stringify({consulta, estado: estadoAsistente})
         });
 
         if (!respuesta.ok) throw new Error(`Error HTTP ${respuesta.status}`);
-
         const data = await respuesta.json();
+        estadoAsistente = data.estado || {};
 
-        salida.innerHTML = `
-            <div class="respuesta">
-                <h3>${data.titulo}</h3>
-                <ul>${data.soluciones.map(s => `<li>${s}</li>`).join("")}</ul>
-            </div>
-        `;
+        let html = `<strong>BizzSoft:</strong> ${data.mensaje || ""}`;
+        if (data.detalle && data.detalle.length) {
+            html += `<ul>${data.detalle.map(x => `<li>${x}</li>`).join("")}</ul>`;
+        }
+        agregarMensaje("bot", html);
+        pintarOpciones(data.opciones || []);
     } catch (e) {
-        salida.innerHTML = `
-            <div class="respuesta">
-                <h3>No pudimos procesar la consulta</h3>
-                <p>${e.message}</p>
-            </div>
-        `;
+        agregarMensaje("bot", `<strong>BizzSoft:</strong> No pude procesar la consulta. ${e.message}`);
     } finally {
         boton.disabled = false;
-        boton.textContent = "Buscar";
+        boton.textContent = "Preguntar";
     }
 }
 
-boton.addEventListener("click", buscarSolucion);
+boton.addEventListener("click", () => enviarConsulta());
 input.addEventListener("keydown", e => {
-    if (e.key === "Enter") buscarSolucion();
+    if (e.key === "Enter") enviarConsulta();
+});
+
+document.querySelectorAll("[data-texto]").forEach(b => {
+    b.addEventListener("click", () => enviarConsulta(b.dataset.texto));
+});
+
+document.querySelectorAll("[data-pregunta]").forEach(b => {
+    b.addEventListener("click", () => {
+        document.getElementById("inicio").scrollIntoView({behavior: "smooth"});
+        setTimeout(() => enviarConsulta(b.dataset.pregunta), 400);
+    });
+});
+
+leadForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    leadEstado.textContent = "Enviando...";
+    const payload = Object.fromEntries(new FormData(leadForm).entries());
+
+    try {
+        const respuesta = await fetch("/api/lead/", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": obtenerCookie("csrftoken")
+            },
+            body: JSON.stringify(payload)
+        });
+
+        const data = await respuesta.json();
+        if (!respuesta.ok) throw new Error(data.error || "No se pudo enviar.");
+
+        leadEstado.textContent = data.mensaje;
+        leadForm.reset();
+    } catch (e) {
+        leadEstado.textContent = e.message;
+    }
 });
