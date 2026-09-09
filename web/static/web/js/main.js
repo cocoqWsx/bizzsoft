@@ -61,14 +61,14 @@ async function enviarConsulta(textoManual = null) {
         const data = await respuesta.json();
         estadoAsistente = data.estado || {};
 
-        let html = `<strong>BizzSoft:</strong> ${data.mensaje || ""}`;
+        let html = `<strong>BizSoft:</strong> ${data.mensaje || ""}`;
         if (data.detalle && data.detalle.length) {
             html += `<ul>${data.detalle.map(x => `<li>${x}</li>`).join("")}</ul>`;
         }
         agregarMensaje("bot", html);
         pintarOpciones(data.opciones || []);
     } catch (e) {
-        agregarMensaje("bot", `<strong>BizzSoft:</strong> No pude procesar la consulta. ${e.message}`);
+        agregarMensaje("bot", `<strong>BizSoft:</strong> No pude procesar la consulta. ${e.message}`);
     } finally {
         boton.disabled = false;
         boton.textContent = "Preguntar";
