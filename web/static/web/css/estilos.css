@@ -26,3 +26,35 @@ a{text-decoration:none}.header{position:sticky;top:0;z-index:100;background:rgba
 footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-marca{display:flex;align-items:center;gap:14px}.footer-marca img{width:60px;height:60px;object-fit:contain}.footer-marca h3{color:var(--rojo)}footer p{color:#aaa}
 @media(max-width:1050px){.menu{display:none}}@media(max-width:900px){.pasos,.grid-soluciones{grid-template-columns:1fr 1fr}.sectores{grid-template-columns:1fr}}
 @media(max-width:600px){.boton-cotizar{display:none}.pasos,.grid-soluciones,.dos-columnas{grid-template-columns:1fr}.buscador{flex-direction:column;border-radius:18px}.buscador button{padding:14px}.mensaje.user{margin-left:0}footer{flex-direction:column;align-items:flex-start}}
+
+/* Estado + ciudadanía */
+.estado-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 24px;
+}
+.estado-doble h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+.estado-doble ul {
+    margin-top: 0;
+}
+.boton-estado {
+    margin-top: 18px;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.boton-estado:hover {
+    background: #fff;
+    color: #d90000;
+}
+@media (max-width: 900px) {
+    .estado-doble { grid-template-columns: 1fr; }
+}
