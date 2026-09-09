@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizzSoft | Negocios, tecnología y gestión pública</title>
-    <meta name="description" content="BizzSoft ayuda a descubrir oportunidades de negocio, aumentar ventas, automatizar procesos y mejorar instituciones con tecnología.">
+    <title>BizSoft | Negocios, tecnología y gestión pública</title>
+    <meta name="description" content="BizSoft ayuda a descubrir oportunidades de negocio, aumentar ventas, automatizar procesos y mejorar instituciones con tecnología.">
     <link rel="stylesheet" href="{% static 'web/css/estilos.css' %}">
 </head>
 <body>
 <header class="header">
     <nav class="navbar">
         <a class="marca" href="#inicio">
-            <img class="logo-header" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="Logo BizzSoft">
-            <span>BizzSoft</span>
+            <img class="logo-header" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="Logo BizSoft">
+            <span>BizSoft</span>
         </a>
         <div class="menu">
             <a href="#inicio">Inicio</a>
@@ -29,35 +29,48 @@
 
 <main>
 <section class="hero" id="inicio">
-    <img class="logo-hero" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
+    <img class="logo-hero" src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizSoft">
     <p class="etiqueta">NEGOCIOS • TECNOLOGÍA • INNOVACIÓN</p>
-    <h1>Tecnología e inteligencia para <span>crear y potenciar negocios</span></h1>
+    <h1>Transformamos <span>problemas en soluciones</span></h1>
     <p class="hero-descripcion">
-        Te ayudamos a descubrir oportunidades de negocio, validar ideas, conseguir clientes,
-        aumentar ventas, automatizar procesos y mejorar organizaciones.
+        Observamos, analizamos y desarrollamos soluciones para mejorar negocios, organizaciones y servicios al ciudadano mediante tecnología e innovación.
     </p>
 
     <div class="asistente-box">
         <div id="chat" class="chat">
             <div class="mensaje bot">
-                <strong>BizzSoft:</strong>
-                Cuéntame qué quieres lograr. Por ejemplo: “quiero iniciar un negocio pero no sé cuál”.
+                <strong>BizSoft:</strong>
+                Cuéntame el problema que quieres resolver. Puede ser de un negocio, una organización, un servicio público o una oportunidad que hayas observado en la calle.
             </div>
         </div>
 
         <div id="chips" class="chips">
-            <button data-texto="quiero iniciar un negocio pero no sé cuál">Quiero iniciar un negocio</button>
-            <button data-texto="quiero aumentar las ventas de mi negocio">Aumentar ventas</button>
-            <button data-texto="quiero automatizar procesos">Automatizar procesos</button>
+            <button data-texto="mi negocio no vende lo suficiente">Mi negocio no vende suficiente</button>
+            <button data-texto="tengo un proceso que demora mucho">Un proceso demora mucho</button>
+            <button data-texto="quiero iniciar un negocio pero no sé cuál">Quiero emprender</button>
         </div>
 
         <div class="buscador">
-            <input id="consulta" type="text" placeholder="Escribe tu necesidad...">
-            <button id="btnBuscar" type="button">Preguntar</button>
+            <input id="consulta" type="text" placeholder="Cuéntanos el problema que quieres resolver...">
+            <button id="btnBuscar" type="button">Analizar problema</button>
         </div>
     </div>
 
     <p class="frase-marca">Pasión por los negocios • Servicio al ciudadano • Compromiso con el Perú</p>
+</section>
+
+<section class="seccion" id="metodo">
+    <div class="titulo-seccion">
+        <p class="etiqueta">MÉTODO BIZSOFT</p>
+        <h2>Primero entendemos el problema. <span>Después construimos.</span></h2>
+        <p>No vendemos tecnología por venderla. Partimos de problemas reales, buscamos evidencia y probamos soluciones que puedan generar una mejora medible.</p>
+    </div>
+    <div class="pasos">
+        <div><strong>01</strong><h3>Observar</h3><p>Detectamos un problema real y a quién afecta.</p></div>
+        <div><strong>02</strong><h3>Analizar</h3><p>Buscamos causas, evidencia e impacto.</p></div>
+        <div><strong>03</strong><h3>Diseñar</h3><p>Proponemos una solución práctica y viable.</p></div>
+        <div><strong>04</strong><h3>Probar y medir</h3><p>Hacemos un piloto y comprobamos resultados.</p></div>
+    </div>
 </section>
 
 <section class="seccion" id="emprender">
@@ -65,7 +78,7 @@
         <p class="etiqueta">QUIERO EMPRENDER</p>
         <h2>¿Quieres hacer negocios pero <span>no sabes por dónde empezar?</span></h2>
         <p>
-            BizzSoft puede ayudarte a ordenar tus opciones según capital, tiempo, tipo de cliente
+            BizSoft puede ayudarte a ordenar tus opciones según capital, tiempo, tipo de cliente
             y forma de vender. La idea no es adivinar un negocio ganador, sino encontrar opciones
             que merezcan ser validadas antes de invertir.
         </p>
@@ -87,8 +100,8 @@
 
 <section class="seccion" id="soluciones">
     <div class="titulo-seccion">
-        <p class="etiqueta">SOLUCIONES BIZZSOFT</p>
-        <h2>De la idea al <span>resultado</span></h2>
+        <p class="etiqueta">SOLUCIONES BIZSOFT</p>
+        <h2>Del problema al <span>resultado</span></h2>
     </div>
     <div class="grid-soluciones">
         <article class="card"><div class="card-icono">↗</div><h3>Aumentar ventas</h3><p>Leads, automatización comercial y análisis de oportunidades.</p></article>
@@ -129,8 +142,8 @@
 <section class="contacto-wrap" id="contacto">
     <div class="titulo-seccion">
         <p class="etiqueta">CONTACTO</p>
-        <h2>Convirtamos tu necesidad en <span>una oportunidad</span></h2>
-        <p>Déjanos tus datos y cuéntanos brevemente qué necesitas.</p>
+        <h2>Convirtamos tu problema en <span>una solución</span></h2>
+        <p>Déjanos tus datos y cuéntanos qué problema has observado o qué resultado quieres conseguir.</p>
     </div>
 
     <form id="leadForm" class="lead-form">
@@ -148,8 +161,8 @@
                 <input name="telefono" placeholder="+51 ...">
             </label>
         </div>
-        <label>¿Qué necesitas?*
-            <textarea name="necesidad" required rows="5" placeholder="Ejemplo: quiero iniciar un negocio, aumentar ventas o automatizar un proceso"></textarea>
+        <label>¿Qué problema quieres resolver?*
+            <textarea name="necesidad" required rows="5" placeholder="Ejemplo: mis clientes tardan en cotizar, pierdo ventas o un trámite demora demasiado"></textarea>
         </label>
         <button type="submit">Enviar solicitud</button>
         <p id="leadEstado" class="lead-estado"></p>
@@ -159,10 +172,10 @@
 
 <footer>
     <div class="footer-marca">
-        <img src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizzSoft">
-        <div><h3>BizzSoft</h3><p>Tecnología, negocios y gestión pública.</p></div>
+        <img src="{% static 'web/img/logo-bizzsoft.png' %}" alt="BizSoft">
+        <div><h3>BizSoft</h3><p>Tecnología, negocios y gestión pública.</p></div>
     </div>
-    <p>© 2026 BizzSoft • Perú</p>
+    <p>© 2026 BizSoft • Perú</p>
 </footer>
 
 <script src="{% static 'web/js/main.js' %}"></script>
