@@ -99,3 +99,47 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
 .logo-header,.logo-hero,.footer-marca img{
     object-fit:contain;
 }
+
+
+/* Ciberseguridad y prevención digital */
+.ciberseguridad-seccion{
+    background:#fff;
+    padding:105px 24px;
+}
+.ciber-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.grid-ciber{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:52px;
+}
+.card-ciber{
+    background:#fff7f7;
+    border:1px solid #f0dddd;
+    border-radius:18px;
+    padding:28px;
+}
+.card-ciber h3{
+    margin:12px 0 8px;
+}
+.card-ciber p{
+    color:var(--gris);
+    line-height:1.6;
+}
+.ciber-llamada{
+    margin-top:34px;
+    text-align:center;
+}
+.ciber-llamada p{
+    color:#d60000;
+    margin-bottom:18px;
+}
+@media(max-width:900px){
+    .grid-ciber{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .grid-ciber{grid-template-columns:1fr}
+}

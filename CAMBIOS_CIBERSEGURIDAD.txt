@@ -1,0 +1,7 @@
+Cambios de esta versión:
+1. Se agregó la sección “Ciberseguridad y prevención digital”.
+2. Se añadió acceso desde el menú y desde el asistente.
+3. Se amplió el diagnóstico de ciberseguridad del asistente.
+4. Se mantiene el logo robot, Tecnología personalizada, Inversión, Estado y ciudadanía y el resto del proyecto sin cambios.
+
+Enfoque: prevención, hacking ético autorizado, análisis de vulnerabilidades, prevención de fraude, documentación responsable de incidentes y capacitación.
