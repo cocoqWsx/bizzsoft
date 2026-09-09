@@ -1,0 +1,4 @@
+Cambios realizados en esta versión:
+1. Se reemplazó el logo anterior por el robot rojo/blanco de BizSoft.
+2. Se agregó la sección 'Tecnología personalizada'.
+3. No se modificó el asistente, inversión, Estado y ciudadanía, empresas, contacto ni demás funciones.

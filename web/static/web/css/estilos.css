@@ -58,3 +58,44 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
 @media (max-width: 900px) {
     .estado-doble { grid-template-columns: 1fr; }
 }
+
+
+/* Tecnología personalizada */
+.tecnologia-personalizada{
+    background:#fff7f7;
+    padding:105px 24px;
+}
+.tecnologia-contenido{
+    max-width:1200px;
+    margin:auto;
+}
+.grid-tecnologia{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin-top:52px;
+}
+.card-tecnologia{
+    background:#fff;
+    border:1px solid #f0dddd;
+    border-radius:18px;
+    padding:28px;
+}
+.card-tecnologia h3{
+    margin:12px 0 8px;
+}
+.card-tecnologia p{
+    color:var(--gris);
+    line-height:1.6;
+}
+@media(max-width:900px){
+    .grid-tecnologia{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .grid-tecnologia{grid-template-columns:1fr}
+}
+
+/* Ajuste visual para el nuevo robot BizSoft */
+.logo-header,.logo-hero,.footer-marca img{
+    object-fit:contain;
+}
