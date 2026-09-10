@@ -230,6 +230,91 @@ def flujo_publico(consulta, estado):
     return iniciar_publico()
 
 
+
+# -------------------- BIZSOFT ANTIFRAUDE --------------------
+
+def es_posible_fraude(t):
+    t = t.lower()
+    claves = [
+        "posible fraude", "fraude digital", "me quieren estafar", "me estafaron",
+        "estafa", "phishing", "página falsa", "pagina falsa", "suplantación",
+        "suplantacion", "anuncio falso", "publicidad engañosa", "inversión falsa",
+        "inversion falsa", "venta falsa", "compra falsa", "perfil falso"
+    ]
+    return any(k in t for k in claves)
+
+
+def iniciar_antifraude():
+    return {
+        "mensaje": "Analicemos el posible fraude sin interactuar con el sospechoso ni acceder a sistemas ajenos. ¿Qué ocurrió o qué te hizo desconfiar?",
+        "opciones": ["Página o enlace sospechoso", "Anuncio o Marketplace", "Suplantación de identidad", "Inversión sospechosa", "Mensaje o correo sospechoso"],
+        "estado": {"flujo": "antifraude", "paso": "hecho"},
+    }
+
+
+def flujo_antifraude(consulta, estado):
+    paso = estado.get("paso", "hecho")
+    if paso == "hecho":
+        estado.update(hecho=consulta, paso="canal")
+        return {
+            "mensaje": "¿Dónde ocurrió o por qué canal llegó? Por ejemplo: Facebook Marketplace, WhatsApp, Instagram, correo, web, llamada u otro.",
+            "opciones": ["Facebook Marketplace", "WhatsApp", "Instagram", "Correo", "Página web", "Otro"],
+            "estado": estado,
+        }
+    if paso == "canal":
+        estado.update(canal=consulta, paso="evidencia")
+        return {
+            "mensaje": "¿Qué evidencia tienes disponible? No compartas contraseñas, códigos de verificación ni datos bancarios completos.",
+            "opciones": ["URL o dominio", "Capturas", "Número o perfil", "Comprobante de pago", "Correos o mensajes", "Varias evidencias"],
+            "estado": estado,
+        }
+    if paso == "evidencia":
+        estado.update(evidencia=consulta, paso="pago")
+        return {
+            "mensaje": "¿Llegaste a enviar dinero, datos personales, credenciales o códigos de verificación? Describe solo lo necesario y evita publicar información sensible.",
+            "opciones": ["No envié nada", "Envié dinero", "Compartí datos", "Compartí una credencial o código", "No estoy seguro"],
+            "estado": estado,
+        }
+    if paso == "pago":
+        estado.update(pago=consulta, paso="resultado")
+        detalle = [
+            f"1. HECHO REPORTADO: {estado.get('hecho','por precisar')}.",
+            f"2. CANAL: {estado.get('canal','por precisar')}.",
+            f"3. EVIDENCIA DISPONIBLE: {estado.get('evidencia','por ordenar')}.",
+            f"4. EXPOSICIÓN DECLARADA: {estado.get('pago','por precisar')}.",
+            "5. PRESERVAR: guarda capturas completas, URL exacta, fecha/hora, nombre del perfil o comercio, correos, comprobantes y cualquier identificador visible. No alteres los archivos originales si pueden servir como evidencia.",
+            "6. VERIFICAR: contrasta dominio, identidad del vendedor/empresa, canales oficiales, reputación y consistencia de la oferta sin intentar entrar a cuentas o sistemas ajenos.",
+            "7. CONTENER: si compartiste credenciales o códigos, cambia contraseñas desde el servicio oficial, activa autenticación en dos pasos y contacta al proveedor o banco cuando corresponda.",
+            "8. REPORTAR: usa los mecanismos de la plataforma, entidad financiera y autoridades competentes según el caso. Conserva los números de reporte o denuncia.",
+        ]
+        return {
+            "mensaje": "Diagnóstico defensivo inicial del posible fraude:",
+            "detalle": detalle,
+            "opciones": ["Quiero ordenar mis evidencias", "Analizar otro posible fraude", "Quiero mejorar mi ciberseguridad", "Tengo otro problema"],
+            "estado": {"flujo": "antifraude", "paso": "resultado", **estado},
+        }
+    if paso == "resultado":
+        q = consulta.lower()
+        if "ordenar" in q and "evid" in q:
+            return {
+                "mensaje": "Organiza la evidencia en una línea de tiempo para que sea útil al reportar el caso.",
+                "detalle": [
+                    "Fecha y hora del contacto o anuncio.",
+                    "Canal y URL/perfil/teléfono involucrado.",
+                    "Qué ofrecían o solicitaban.",
+                    "Capturas y archivos originales.",
+                    "Comprobantes o movimientos relacionados, ocultando datos sensibles al compartir copias.",
+                    "Acciones tomadas: bloqueo, reporte, contacto con banco/plataforma o denuncia.",
+                    "Número de reporte, expediente o constancia si existe."
+                ],
+                "opciones": ["Analizar otro posible fraude", "Analizar un problema público", "Analizar una inversión"],
+                "estado": estado,
+            }
+        if "otro posible fraude" in q:
+            return iniciar_antifraude()
+    return iniciar_antifraude()
+
+
 # -------------------- DIAGNÓSTICO GENERAL --------------------
 
 def categoria_problema(t):
@@ -270,7 +355,7 @@ def responder(consulta, estado=None):
     consulta = (consulta or "").strip()
     estado = estado or {}
     if not consulta:
-        return {"mensaje": "Cuéntame el problema, la inversión o el asunto público que quieres analizar.", "opciones": ["Analizar una inversión", "Analizar un problema público"], "estado": {}}
+        return {"mensaje": "Cuéntame el problema, la inversión, el asunto público o el posible fraude que quieres analizar.", "opciones": ["Analizar una inversión", "Analizar un problema público", "Analizar posible fraude"], "estado": {}}
 
     q = consulta.lower()
 
@@ -278,7 +363,11 @@ def responder(consulta, estado=None):
         return flujo_inversion(consulta, estado)
     if estado.get("flujo") == "publico":
         return flujo_publico(consulta, estado)
+    if estado.get("flujo") == "antifraude":
+        return flujo_antifraude(consulta, estado)
 
+    if es_posible_fraude(consulta) or "analizar otro posible fraude" in q:
+        return iniciar_antifraude()
     if es_inversion(consulta) or "analizar otra inversión" in q or "analizar otra inversion" in q:
         return iniciar_inversion()
     if es_problema_publico(consulta) or "analizar un problema público" in q or "analizar un problema publico" in q:

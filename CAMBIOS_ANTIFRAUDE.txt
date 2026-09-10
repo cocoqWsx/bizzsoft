@@ -1,0 +1,6 @@
+Cambios de esta versión:
+1. Se mantiene intacto el resto del sitio y las funciones previas.
+2. Se agrega el concepto BizSoft AntiFraude dentro de Ciberseguridad.
+3. Se agrega un flujo defensivo en el asistente para posibles fraudes digitales.
+4. El flujo ayuda a recopilar y ordenar señales/evidencia, contener riesgos y orientar el reporte.
+5. No incluye acceso no autorizado, rastreo intrusivo ni acciones ofensivas contra sospechosos.

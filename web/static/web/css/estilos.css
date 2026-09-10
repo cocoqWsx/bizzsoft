@@ -143,3 +143,51 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
 @media(max-width:600px){
     .grid-ciber{grid-template-columns:1fr}
 }
+
+
+/* BizSoft AntiFraude */
+.antifraude-box{
+    margin-top:52px;
+    padding:34px;
+    border:1px solid #f0dddd;
+    border-radius:22px;
+    background:#fff7f7;
+}
+.antifraude-box h3{
+    margin:12px 0 14px;
+    font-size:clamp(28px,3vw,38px);
+    line-height:1.15;
+}
+.antifraude-box>div:first-child>p:last-child,
+.antifraude-nota{
+    color:var(--gris);
+    line-height:1.7;
+}
+.antifraude-pasos{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+    margin:26px 0 22px;
+}
+.antifraude-pasos span{
+    padding:16px;
+    background:#fff;
+    border:1px solid #f0dddd;
+    border-radius:14px;
+}
+.antifraude-pasos strong{
+    display:block;
+    color:var(--rojo);
+    font-size:20px;
+    margin-bottom:6px;
+}
+.antifraude-nota{
+    margin-bottom:20px;
+    font-size:14px;
+}
+@media(max-width:900px){
+    .antifraude-pasos{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+    .antifraude-pasos{grid-template-columns:1fr}
+}
