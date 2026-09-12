@@ -4,6 +4,12 @@ const chat = document.getElementById("chat");
 const chips = document.getElementById("chips");
 const leadForm = document.getElementById("leadForm");
 const leadEstado = document.getElementById("leadEstado");
+const ctaImplementar = document.getElementById("ctaImplementar");
+const btnImplementar = document.getElementById("btnImplementar");
+const origenDiagnostico = document.getElementById("origenDiagnostico");
+const necesidadLead = leadForm ? leadForm.querySelector('[name="necesidad"]') : null;
+
+let historialDiagnostico = [];
 
 let estadoAsistente = {};
 
@@ -42,6 +48,7 @@ async function enviarConsulta(textoManual = null) {
     if (!consulta) return;
 
     agregarMensaje("user", `<strong>Tú:</strong> ${consulta}`);
+    historialDiagnostico.push(`Usuario: ${consulta}`);
     input.value = "";
     boton.disabled = true;
     boton.textContent = "Analizando...";
@@ -66,7 +73,10 @@ async function enviarConsulta(textoManual = null) {
             html += `<ul>${data.detalle.map(x => `<li>${x}</li>`).join("")}</ul>`;
         }
         agregarMensaje("bot", html);
+        const resumenBot = [data.mensaje || "", ...(data.detalle || [])].filter(Boolean).join(" | ");
+        if (resumenBot) historialDiagnostico.push(`BizSoft: ${resumenBot}`);
         pintarOpciones(data.opciones || []);
+        if (ctaImplementar) ctaImplementar.hidden = false;
     } catch (e) {
         agregarMensaje("bot", `<strong>BizSoft:</strong> No pude procesar la consulta. ${e.message}`);
     } finally {
@@ -90,6 +100,21 @@ document.querySelectorAll("[data-pregunta]").forEach(b => {
         setTimeout(() => enviarConsulta(b.dataset.pregunta), 400);
     });
 });
+
+if (btnImplementar) {
+    btnImplementar.addEventListener("click", () => {
+        const resumen = historialDiagnostico.slice(-10).join("\n");
+        if (necesidadLead && resumen) {
+            necesidadLead.value = `Quiero implementar la solución analizada con el Asistente BizSoft.\n\nResumen del diagnóstico:\n${resumen}`;
+        }
+        if (origenDiagnostico) origenDiagnostico.hidden = false;
+        document.getElementById("contacto").scrollIntoView({behavior: "smooth"});
+        setTimeout(() => {
+            const nombre = leadForm.querySelector('[name="nombre"]');
+            if (nombre) nombre.focus();
+        }, 500);
+    });
+}
 
 leadForm.addEventListener("submit", async (e) => {
     e.preventDefault();

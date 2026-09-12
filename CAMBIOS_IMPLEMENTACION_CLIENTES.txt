@@ -1,0 +1,8 @@
+BIZSOFT - CONVERSIÓN DEL DIAGNÓSTICO EN CLIENTE
+
+- Después de usar el Asistente BizSoft aparece el botón: "Quiero implementar esta solución con BizSoft".
+- Al pulsarlo, el usuario baja al formulario de contacto.
+- El resumen reciente del diagnóstico se copia automáticamente en "¿Qué problema quieres resolver?".
+- El usuario completa nombre y correo o WhatsApp y envía la solicitud.
+- La solicitud continúa guardándose mediante el endpoint /api/lead/ existente.
+- Se mantienen AntiFraude, Ciberseguridad, Tecnología personalizada, Inversión, Estado y ciudadanía y el resto de funciones.

@@ -1,0 +1,12 @@
+ACTUALIZACIÓN DE IDENTIDAD BIZSOFT — ESCUDO
+
+Cambios realizados:
+1. El escudo rojo y blanco pasa a ser el logo principal de BizSoft.
+2. El escudo representa cuatro pilares visuales:
+   - crecimiento de negocios,
+   - seguridad,
+   - Estado y ciudadanía,
+   - tecnología e innovación.
+3. El robot anterior se conserva como identidad visual del Asistente BizSoft.
+4. Se ajustó el tamaño del logo en cabecera, portada y pie de página.
+5. No se modificaron los flujos del asistente, AntiFraude, inversión, Estado y ciudadanía ni captación de clientes.

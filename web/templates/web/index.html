@@ -39,9 +39,12 @@
 
     <div class="asistente-box">
         <div id="chat" class="chat">
-            <div class="mensaje bot">
-                <strong>BizSoft:</strong>
-                Cuéntame el problema que quieres resolver. Puede ser de un negocio, una organización, un servicio público o una oportunidad que hayas observado en la calle.
+            <div class="mensaje bot mensaje-con-avatar">
+                <img class="avatar-asistente" src="{% static 'web/img/asistente-bizsoft-robot.png' %}" alt="Asistente BizSoft">
+                <div>
+                    <strong>Asistente BizSoft:</strong>
+                    Cuéntame el problema que quieres resolver. Puede ser de un negocio, una organización, un servicio público o una oportunidad que hayas observado en la calle.
+                </div>
             </div>
         </div>
 
@@ -58,6 +61,12 @@
             <input id="consulta" type="text" placeholder="Cuéntanos el problema que quieres resolver...">
             <button id="btnBuscar" type="button">Analizar problema</button>
         </div>
+    </div>
+
+    <div id="ctaImplementar" class="cta-implementar" hidden>
+        <p><strong>¿Quieres llevar esta solución a la práctica?</strong></p>
+        <p>El asistente te ayuda con el diagnóstico inicial. Si deseas desarrollar e implementar la solución, envía tu caso a BizSoft.</p>
+        <button id="btnImplementar" class="boton-implementar" type="button">Quiero implementar esta solución con BizSoft</button>
     </div>
 
     <p class="frase-marca">Pasión por los negocios • Servicio al ciudadano • Compromiso con el Perú</p>
@@ -276,6 +285,10 @@
     </div>
 
     <form id="leadForm" class="lead-form">
+        <div id="origenDiagnostico" class="origen-diagnostico" hidden>
+            <strong>Solicitud desde el Asistente BizSoft</strong>
+            <p>Hemos trasladado tu diagnóstico al formulario para que puedas solicitar la implementación.</p>
+        </div>
         <div class="dos-columnas">
             <label>Nombre*
                 <input name="nombre" required placeholder="Tu nombre">
