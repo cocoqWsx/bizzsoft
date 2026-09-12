@@ -202,17 +202,20 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
 
 /* Identidad BizSoft: escudo principal + robot como asistente */
 .logo-header{
-    width:48px;
-    height:52px;
-    border-radius:8px;
+    width:58px;
+    height:64px;
+    object-fit:contain;
+    border-radius:0;
     background:#fff;
 }
 .logo-hero{
-    width:145px;
-    height:155px;
-    border-radius:18px;
+    width:210px;
+    height:225px;
+    object-fit:contain;
+    border-radius:0;
     background:#fff;
-    box-shadow:0 10px 30px rgba(217,0,0,.08);
+    box-shadow:none;
+    margin-bottom:10px;
 }
 .footer-marca img{
     background:#fff;
@@ -234,6 +237,6 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
     border:1px solid #f0dddd;
 }
 @media(max-width:600px){
-    .logo-hero{width:125px;height:135px}
+    .logo-hero{width:175px;height:190px}
     .avatar-asistente{width:36px;height:36px;flex-basis:36px}
 }

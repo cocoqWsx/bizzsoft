@@ -1,0 +1,6 @@
+ACTUALIZACIÓN LOGO ESCUDO
+- Se reemplazó el logo por una versión del escudo completo.
+- Fondo del logo cambiado a blanco puro.
+- El escudo del inicio ahora se muestra más grande.
+- Se eliminó la sombra/fondo gris del logo.
+- Se mantiene la implementación de clientes, AntiFraude, Ciberseguridad, inversión y Estado/ciudadanía.
