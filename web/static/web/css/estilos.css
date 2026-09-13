@@ -240,3 +240,39 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
     .logo-hero{width:210px;height:225px}
     .avatar-asistente{width:36px;height:36px;flex-basis:36px}
 }
+
+
+/* CORRECCION FINAL: mostrar el escudo completo sin recortes */
+.logo-header{
+    width:54px !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    display:block;
+    background:#fff !important;
+}
+.logo-hero{
+    width:240px !important;
+    height:auto !important;
+    max-height:none !important;
+    object-fit:contain !important;
+    object-position:center !important;
+    display:block;
+    margin:0 auto 18px !important;
+    background:#fff !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+}
+.hero{
+    overflow:visible !important;
+}
+.footer-marca img{
+    width:72px;
+    height:auto !important;
+    object-fit:contain !important;
+}
+@media(max-width:600px){
+    .logo-hero{width:190px !important;height:auto !important;}
+    .logo-header{width:46px !important;height:auto !important;}
+}

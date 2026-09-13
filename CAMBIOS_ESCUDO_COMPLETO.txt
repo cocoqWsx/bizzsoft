@@ -1,0 +1,5 @@
+CORRECCION DEL LOGO
+- Se reemplazó la imagen anterior que tenía cortada la punta inferior del escudo.
+- El nuevo PNG contiene el escudo completo, con margen blanco seguro en todos sus lados.
+- CSS cambiado a height:auto para que el navegador nunca corte el escudo.
+- Se mantiene la implementación de clientes y todas las funciones existentes.
