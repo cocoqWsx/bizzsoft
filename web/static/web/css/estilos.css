@@ -296,3 +296,33 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
     filter: none !important;
     border: 0 !important;
 }
+
+/* BizSoft v6 - escudo solo con fondo blanco */
+.logo-hero {
+    width: 250px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 18px !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.logo-header {
+    height: 52px !important;
+    width: auto !important;
+    object-fit: contain !important;
+    background: #ffffff !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.hero,
+.hero-content {
+    overflow: visible !important;
+    background-color: #ffffff;
+}
