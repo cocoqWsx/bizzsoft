@@ -276,3 +276,23 @@ footer{padding:55px max(8vw,24px);background:#111;color:#fff;display:flex;justif
     .logo-hero{width:190px !important;height:auto !important;}
     .logo-header{width:46px !important;height:auto !important;}
 }
+
+/* Logo BizSoft v5 - escudo completo y limpio */
+.logo-hero {
+    width: 240px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto 18px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    filter: none !important;
+    border: 0 !important;
+}
+.logo-header {
+    object-fit: contain !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    filter: none !important;
+    border: 0 !important;
+}
