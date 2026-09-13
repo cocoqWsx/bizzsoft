@@ -1,0 +1,7 @@
+CAMBIOS DE ESTA VERSIÓN
+- Se eliminó el gran margen blanco interno de la imagen del escudo.
+- El escudo ahora ocupa casi todo el PNG.
+- Fondo completamente blanco.
+- Logo principal aumentado en el hero.
+- Logo del encabezado aumentado ligeramente.
+- Se conserva la implementación de clientes y todas las funciones anteriores.
