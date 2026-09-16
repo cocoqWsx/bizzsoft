@@ -1,0 +1,23 @@
+BIZSOFT V10 - SOLUCIONES ADAPTADAS A CADA NEGOCIO
+
+Se añadió una nueva sección comercial entre “BizSoft para empresas” y “Prueba lo que construimos”.
+
+Sectores incluidos:
+- Transporte y logística
+- Talleres y servicios automotrices
+- Ópticas y comercios especializados
+- Otros sectores
+
+Cada botón “Analizar este sector” utiliza el Asistente BizSoft existente mediante data-pregunta. No se agregaron APIs nuevas ni se modificó la base de datos.
+
+Se mantienen:
+- PostgreSQL/Supabase
+- Leads y Django Admin
+- Configuración de seguridad existente
+- Asistente BizSoft
+- Analizador de inversión
+- AntiFraude
+- Predictor de ventas
+- Resto de secciones y funcionalidades existentes
+
+Los sectores se presentan como ejemplos de aplicación, no como productos ya terminados.
