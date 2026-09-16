@@ -1,0 +1,8 @@
+BizSoft V8
+- La portada prioriza soluciones para empresas.
+- Beneficios visibles: ventas, automatización, IA/software y ciberseguridad.
+- Se mantienen las demos funcionales.
+- Se añadió Casos demostrativos, identificados expresamente como demos (no clientes reales).
+- Cada caso conecta problema -> propuesta -> acción.
+- CTA final para convertir el interés en contacto comercial.
+- Se mantienen inversión, Estado/ciudadanía y demás áreas existentes.
