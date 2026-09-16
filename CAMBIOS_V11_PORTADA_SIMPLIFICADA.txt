@@ -1,0 +1,11 @@
+BIZSOFT V11 - PORTADA COMERCIAL SIMPLIFICADA
+
+- Portada enfocada en empresas.
+- 4 capacidades principales: ventas, automatización, IA/software y ciberseguridad.
+- Asistente BizSoft conservado.
+- Nueva sección compacta de soluciones por sector.
+- Demos reducidas visualmente a 3: Asistente Empresarial, AntiFraude y Predictor de Ventas.
+- Método BizSoft conservado.
+- Contacto simplificado.
+- Se retiraron de la portada las secciones extensas de inversión, Estado/ciudadanía, tecnología personalizada, casos demostrativos y explicaciones extensas de ciberseguridad.
+- Las funciones backend existentes no fueron eliminadas.

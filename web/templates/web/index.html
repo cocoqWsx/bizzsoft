@@ -4,377 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizSoft | Negocios, tecnología y gestión pública</title>
-    <meta name="description" content="BizSoft transforma problemas en soluciones para negocios, inversiones, entidades públicas y ciudadanía mediante tecnología, análisis e innovación.">
+    <title>BizSoft | Soluciones tecnológicas para empresas</title>
+    <meta name="description" content="BizSoft analiza problemas empresariales y desarrolla soluciones con software, inteligencia artificial, automatización, datos y ciberseguridad.">
     <link rel="stylesheet" href="{% static 'web/css/estilos.css' %}">
 </head>
 <body>
 <header class="header">
     <nav class="navbar">
-        <a class="marca" href="#inicio">
-            <img class="logo-header" src="{% static 'web/img/logo-bizzsoft-escudo-blanco-v6.png' %}?v=6" alt="Logo BizSoft">
-            <span>BizSoft</span>
-        </a>
-        <div class="menu">
-            <a href="#inicio">Inicio</a>
-            <a href="#invertir">Invertir</a>
-            <a href="#soluciones">Soluciones</a>
-            <a href="#empresas">Empresas</a>
-            <a href="#estado">Estado y ciudadanía</a>
-            <a href="#ciberseguridad">Ciberseguridad</a>
-            <a href="#contacto">Contacto</a>
-        </div>
-        <a class="boton-cotizar" href="#contacto">Cotiza tu proyecto</a>
+        <a class="marca" href="#inicio"><img class="logo-header" src="{% static 'web/img/logo-bizzsoft-escudo-blanco-v6.png' %}?v=6" alt="Logo BizSoft"><span>BizSoft</span></a>
+        <div class="menu"><a href="#inicio">Inicio</a><a href="#soluciones">Soluciones</a><a href="#sectores">Sectores</a><a href="#herramientas">Demos</a><a href="#metodo">Cómo trabajamos</a><a href="#contacto">Contacto</a></div>
+        <a class="boton-cotizar" href="#contacto">Hablar con BizSoft</a>
     </nav>
 </header>
-
 <main>
 <section class="hero" id="inicio">
     <img class="logo-hero" src="{% static 'web/img/logo-bizzsoft-escudo-blanco-v6.png' %}?v=6" alt="BizSoft">
-    <p class="etiqueta">NEGOCIOS • TECNOLOGÍA • INNOVACIÓN</p>
+    <p class="etiqueta">TECNOLOGÍA PARA EMPRESAS</p>
     <h1>Transformamos <span>problemas en soluciones</span></h1>
     <p class="hero-subtitulo-comercial">Tecnología personalizada para hacer crecer, automatizar y proteger tu negocio.</p>
-    <p class="hero-descripcion">Analizamos los problemas de tu empresa y desarrollamos soluciones con software, inteligencia artificial, automatización, análisis de datos y ciberseguridad.</p>
-    <div class="hero-acciones"><a class="btn-principal-comercial" href="#asistente-comercial">Analizar mi negocio</a><a class="btn-secundario-comercial" href="#contacto">Quiero implementar una solución</a></div>
+    <p class="hero-descripcion">Primero entendemos el problema. Después diseñamos la solución con software, inteligencia artificial, automatización, datos o ciberseguridad.</p>
+    <div class="hero-acciones"><a class="btn-principal-comercial" href="#asistente-comercial">Analizar mi negocio</a><a class="btn-secundario-comercial" href="#contacto">Hablar con BizSoft</a></div>
+
     <div class="asistente-box" id="asistente-comercial">
-        <div id="chat" class="chat">
-            <div class="mensaje bot mensaje-con-avatar">
-                <img class="avatar-asistente" src="{% static 'web/img/asistente-bizsoft-robot.png' %}" alt="Asistente BizSoft">
-                <div>
-                    <strong>Asistente BizSoft:</strong>
-                    Cuéntame el problema que quieres resolver. Puede ser de un negocio, una organización, un servicio público o una oportunidad que hayas observado en la calle.
-                </div>
-            </div>
-        </div>
-
-        <div id="chips" class="chips">
-            <button data-texto="mi negocio no vende lo suficiente">Mi negocio no vende suficiente</button>
-            <button data-texto="tengo un proceso que demora mucho">Un proceso demora mucho</button>
-            <button data-texto="quiero analizar una inversión">Quiero invertir</button>
-            <button data-texto="quiero analizar un problema público">Problema público</button>
-            <button data-texto="quiero mejorar mi ciberseguridad">Ciberseguridad</button>
-            <button data-texto="quiero analizar un posible fraude digital">Posible fraude</button>
-        </div>
-
-        <div class="buscador">
-            <input id="consulta" type="text" placeholder="Cuéntanos el problema que quieres resolver...">
-            <button id="btnBuscar" type="button">Analizar problema</button>
-        </div>
+        <div id="chat" class="chat"><div class="mensaje bot mensaje-con-avatar"><img class="avatar-asistente" src="{% static 'web/img/asistente-bizsoft-robot.png' %}" alt="Asistente BizSoft"><div><strong>Asistente BizSoft:</strong> Cuéntame qué problema tiene tu negocio. No necesitas saber qué tecnología necesitas; primero analizamos el problema.</div></div></div>
+        <div id="chips" class="chips"><button data-texto="mi negocio no vende lo suficiente">Necesito más oportunidades de venta</button><button data-texto="tengo un proceso que demora mucho">Quiero automatizar un proceso</button><button data-texto="quiero desarrollar una solución tecnológica para mi empresa">Necesito software o IA</button><button data-texto="quiero mejorar mi ciberseguridad">Ciberseguridad</button></div>
+        <div class="buscador"><input id="consulta" type="text" placeholder="Cuéntanos el problema de tu negocio..."><button id="btnBuscar" type="button">Analizar problema</button></div>
     </div>
-
-    <div id="ctaImplementar" class="cta-implementar" hidden>
-        <p><strong>¿Quieres llevar esta solución a la práctica?</strong></p>
-        <p>El asistente te ayuda con el diagnóstico inicial. Si deseas desarrollar e implementar la solución, envía tu caso a BizSoft.</p>
-        <button id="btnImplementar" class="boton-implementar" type="button">Quiero implementar esta solución con BizSoft</button>
-    </div>
-
-    <p class="frase-marca">Pasión por los negocios • Servicio al ciudadano • Compromiso con el Perú</p>
+    <div id="ctaImplementar" class="cta-implementar" hidden><p><strong>¿Quieres llevar esta solución a la práctica?</strong></p><p>Si deseas desarrollar e implementar la solución, envía tu caso a BizSoft.</p><button id="btnImplementar" class="boton-implementar" type="button">Quiero implementar esta solución con BizSoft</button></div>
 </section>
 
-
-<section class="empresa-first" id="empresas-soluciones">
-  <div class="empresa-first-inner">
-    <p class="etiqueta">BIZSOFT PARA EMPRESAS</p>
-    <h2>Tecnología aplicada a <span>resultados empresariales</span></h2>
-    <p class="empresa-lead">Partimos de un problema real de tu negocio y diseñamos una solución a medida. No necesitas saber qué tecnología usar: primero entendemos el problema.</p>
+<section class="empresa-first" id="soluciones"><div class="empresa-first-inner">
+    <p class="etiqueta">¿QUÉ PUEDE HACER BIZSOFT POR TU EMPRESA?</p><h2>Tecnología aplicada a <span>problemas reales</span></h2>
+    <p class="empresa-lead">Partimos de una necesidad concreta y elegimos la tecnología después de entender cómo funciona tu negocio.</p>
     <div class="empresa-beneficios">
-      <article><strong>📈 Más oportunidades de venta</strong><p>Generación y organización de leads, seguimiento comercial y herramientas para apoyar la captación de clientes.</p></article>
-      <article><strong>⚙️ Automatización</strong><p>Reducimos tareas repetitivas e integramos procesos para que tu equipo pueda concentrarse en actividades de mayor valor.</p></article>
-      <article><strong>🤖 IA y software personalizado</strong><p>Asistentes, aplicaciones y soluciones construidas alrededor de la necesidad concreta de tu empresa.</p></article>
-      <article><strong>🛡️ Ciberseguridad</strong><p>Prevención, análisis defensivo y herramientas para reducir riesgos digitales y fraude.</p></article>
+      <article><strong>📈 Más oportunidades de venta</strong><p>Herramientas para captar, organizar y dar seguimiento a oportunidades comerciales.</p></article>
+      <article><strong>⚙️ Automatización</strong><p>Reducimos tareas repetitivas y trabajo manual para mejorar la operación.</p></article>
+      <article><strong>🤖 IA y software personalizado</strong><p>Sistemas y asistentes diseñados alrededor de las necesidades de tu empresa.</p></article>
+      <article><strong>🛡️ Ciberseguridad</strong><p>Prevención, análisis defensivo y herramientas para reducir riesgos y fraude digital.</p></article>
     </div>
+</div></section>
+
+<section class="sectores-v11" id="sectores"><div class="sectores-v11-inner">
+  <div class="titulo-seccion"><p class="etiqueta">SOLUCIONES POR SECTOR</p><h2>Adaptamos la tecnología a <span>cada negocio</span></h2><p>Estos son ejemplos de aplicación. Analizamos primero cómo trabaja cada empresa antes de proponer una implementación.</p></div>
+  <div class="sectores-v11-grid">
+    <article><div class="sector-v11-icono">🚚</div><h3>Transporte y logística</h3><p>Flota, mantenimiento, entregas, costos y operación.</p><button class="demo-boton" data-pregunta="tengo un negocio de transporte o logística y quiero analizar cómo la tecnología puede mejorarlo">Analizar este sector</button></article>
+    <article><div class="sector-v11-icono">🔧</div><h3>Talleres automotrices</h3><p>Órdenes de trabajo, vehículos, inventario y recordatorios.</p><button class="demo-boton" data-pregunta="tengo un taller automotriz y quiero analizar cómo la tecnología puede mejorarlo">Analizar este sector</button></article>
+    <article><div class="sector-v11-icono">👓</div><h3>Ópticas y comercios</h3><p>Clientes, inventario, seguimiento y herramientas comerciales.</p><button class="demo-boton" data-pregunta="tengo una óptica o comercio y quiero analizar cómo la tecnología puede mejorarlo">Analizar este sector</button></article>
+    <article><div class="sector-v11-icono">🏢</div><h3>Otros negocios</h3><p>Cuéntanos cómo funciona tu empresa y qué problema quieres resolver.</p><button class="demo-boton" data-pregunta="tengo un negocio de otro sector y quiero analizar un problema">Analizar mi negocio</button></article>
   </div>
-</section>
+</div></section>
 
-<section class="sectores-bizsoft" id="soluciones-por-sector">
-  <div class="sectores-inner">
-    <p class="etiqueta">SOLUCIONES ADAPTADAS A CADA NEGOCIO</p>
-    <h2>La tecnología cambia según <span>el problema de tu sector</span></h2>
-    <p class="sectores-intro">Analizamos cómo funciona tu negocio, identificamos oportunidades de mejora y diseñamos una solución tecnológica alrededor de tus necesidades. Estos son ejemplos de aplicación, no productos cerrados.</p>
-    <div class="sectores-grid">
-      <article class="sector-card"><div class="sector-icono">🚚</div><h3>Transporte y logística</h3><p>Optimización de rutas, seguimiento de vehículos y entregas, control de combustible, mantenimiento preventivo, digitalización de documentos y análisis de operación.</p><button type="button" class="sector-boton" data-pregunta="Tengo una empresa de transporte o logística y quiero analizar qué problemas podría resolver con tecnología">Analizar este sector</button></article>
-      <article class="sector-card"><div class="sector-icono">🔧</div><h3>Talleres y servicios automotrices</h3><p>Órdenes de trabajo, historial de clientes y vehículos, inventario, recordatorios de mantenimiento, cotizaciones y seguimiento de servicios.</p><button type="button" class="sector-boton" data-pregunta="Tengo un taller o negocio de servicios automotrices y quiero analizar qué problemas podría resolver con tecnología">Analizar este sector</button></article>
-      <article class="sector-card"><div class="sector-icono">👓</div><h3>Ópticas y comercios especializados</h3><p>Gestión de clientes, inventario, historial de compras o recetas, recordatorios, catálogo digital y herramientas para apoyar la captación y seguimiento de ventas.</p><button type="button" class="sector-boton" data-pregunta="Tengo una óptica o comercio especializado y quiero analizar qué problemas podría resolver con tecnología">Analizar este sector</button></article>
-      <article class="sector-card sector-otro"><div class="sector-icono">🏢</div><h3>¿Tu negocio es de otro sector?</h3><p>Cuéntanos cómo funciona y cuál es el problema. BizSoft analiza primero la necesidad y después propone la tecnología que tenga sentido implementar.</p><button type="button" class="sector-boton sector-boton-principal" data-pregunta="Quiero analizar mi negocio. Es de otro sector y necesito identificar qué problemas puedo resolver con tecnología">Analizar mi negocio</button></article>
-    </div>
-  </div>
-</section>
+<section class="demo-seccion" id="herramientas"><div class="titulo-seccion"><p class="etiqueta">PRUEBA LO QUE CONSTRUIMOS</p><h2>Tecnología que <span>puedes probar</span></h2><p>Tres demostraciones para conocer cómo BizSoft aplica análisis, datos y tecnología.</p></div>
+<div class="grid-demos grid-demos-v11">
+<article class="demo-card"><div class="demo-icono">🤖</div><span>DEMO FUNCIONAL</span><h3>Asistente Empresarial</h3><p>Describe un problema de ventas, procesos u operación y obtén un diagnóstico inicial.</p><button class="demo-boton" data-pregunta="quiero analizar un problema de mi negocio">Probar asistente</button></article>
+<article class="demo-card"><div class="demo-icono">🛡️</div><span>DEMO FUNCIONAL</span><h3>BizSoft AntiFraude</h3><p>Organiza señales de phishing, suplantación, páginas falsas o anuncios sospechosos.</p><button class="demo-boton" data-pregunta="quiero analizar un posible fraude digital">Probar AntiFraude</button></article>
+<article class="demo-card"><div class="demo-icono">📈</div><span>DEMO PREDICTIVA</span><h3>Predictor de Ventas</h3><p>Ingresa ventas anteriores y obtén una estimación orientativa mediante una tendencia lineal sencilla.</p><button class="demo-boton" type="button" id="abrir-predictor">Probar predictor</button></article>
+</div></section>
 
-<section class="demo-seccion" id="herramientas">
-<div class="titulo-seccion"><p class="etiqueta">PRUEBA LO QUE CONSTRUIMOS</p><h2>No solo hablamos de tecnología. <span>Puedes probarla.</span></h2><p>Estas herramientas demostrativas muestran cómo BizSoft convierte problemas reales en soluciones digitales. Pruébalas antes de solicitar una implementación para tu empresa.</p></div>
-<div class="grid-demos">
-<article class="demo-card"><div class="demo-icono">🤖</div><span>DEMO FUNCIONAL</span><h3>Asistente Empresarial BizSoft</h3><p>Describe un problema de ventas, procesos u operación y obtén un diagnóstico inicial organizado.</p><button class="demo-boton" data-pregunta="quiero analizar un problema de mi negocio">Probar asistente</button></article>
-<article class="demo-card"><div class="demo-icono">📊</div><span>DEMO FUNCIONAL</span><h3>Analizador de Inversión</h3><p>Ordena precio, negociación, costos y valor de referencia para construir escenarios de margen y ROI.</p><button class="demo-boton" data-pregunta="quiero analizar una inversión">Probar analizador</button></article>
-<article class="demo-card"><div class="demo-icono">🛡️</div><span>DEMO FUNCIONAL</span><h3>BizSoft AntiFraude</h3><p>Organiza señales de phishing, suplantación, páginas falsas o anuncios sospechosos y ayuda a preservar evidencias.</p><button class="demo-boton" data-pregunta="quiero analizar un posible fraude digital">Probar AntiFraude</button></article>
-<article class="demo-card demo-predictor"><div class="demo-icono">📈</div><span>DEMO PREDICTIVA</span><h3>Predictor de Ventas</h3><p>Prueba una demostración de analítica predictiva: ingresa ventas de meses anteriores y obtén una estimación orientativa del siguiente periodo mediante una tendencia lineal sencilla.</p><button class="demo-boton" type="button" id="abrir-predictor">Probar predictor de ventas</button></article>
-</div><div class="demo-cta"><p><strong>¿Necesitas algo parecido para tu empresa?</strong> Adaptamos la solución a tu problema y objetivos.</p><a href="#contacto" class="btn-principal-comercial">Solicitar solución personalizada</a></div></section>
+<section class="seccion" id="metodo"><div class="titulo-seccion"><p class="etiqueta">MÉTODO BIZSOFT</p><h2>Primero entendemos. <span>Después construimos.</span></h2><p>La tecnología es una herramienta. El punto de partida es el problema que quieres resolver.</p></div>
+<div class="pasos"><div><strong>01</strong><h3>Observar</h3><p>Entendemos el problema y a quién afecta.</p></div><div><strong>02</strong><h3>Analizar</h3><p>Revisamos causas, información e impacto.</p></div><div><strong>03</strong><h3>Diseñar</h3><p>Proponemos una solución práctica y viable.</p></div><div><strong>04</strong><h3>Probar y medir</h3><p>Validamos la solución y medimos resultados.</p></div></div></section>
 
-<section class="casos-demo" id="casos">
-  <div class="casos-inner">
-    <p class="etiqueta">CASOS DEMOSTRATIVOS</p>
-    <h2>Del problema a una <span>solución que puedes ver</span></h2>
-    <p class="casos-intro">Estos ejemplos son demostrativos y no representan clientes reales. Muestran cómo abordamos un problema empresarial antes de desarrollar una implementación personalizada.</p>
-    <div class="casos-grid">
-      <article class="caso"><span class="caso-tag">DEMO · VENTAS</span><h3>Empresa que necesita conseguir más clientes</h3><p><b>Problema:</b> baja captación y seguimiento manual.</p><p><b>Propuesta:</b> sistema de leads + clasificación + seguimiento comercial.</p><a href="#asistente-comercial">Analizar un caso parecido →</a></article>
-      <article class="caso"><span class="caso-tag">DEMO · OPERACIONES</span><h3>Equipo con tareas repetitivas</h3><p><b>Problema:</b> tiempo perdido en tareas manuales.</p><p><b>Propuesta:</b> automatización, integraciones y asistente interno.</p><a href="#asistente-comercial">Analizar un caso parecido →</a></article>
-      <article class="caso"><span class="caso-tag">DEMO · SEGURIDAD</span><h3>Negocio expuesto a fraude digital</h3><p><b>Problema:</b> enlaces, mensajes o transacciones sospechosas.</p><p><b>Propuesta:</b> análisis preventivo, organización de señales y evidencias.</p><a href="#asistente-comercial">Analizar un caso parecido →</a></article>
-    </div>
-    <div class="casos-conversion"><div><strong>¿Tienes un problema diferente?</strong><p>Cuéntanos qué ocurre. Primero lo analizamos y después definimos qué tecnología tendría sentido implementar.</p></div><a href="#contacto" class="btn-principal-comercial">Hablar sobre mi proyecto</a></div>
-  </div>
-</section>
-
-<section class="seccion" id="metodo">
-    <div class="titulo-seccion">
-        <p class="etiqueta">MÉTODO BIZSOFT</p>
-        <h2>Primero entendemos el problema. <span>Después construimos.</span></h2>
-        <p>No vendemos tecnología por venderla. Partimos de problemas reales, buscamos evidencia y probamos soluciones que puedan generar una mejora medible.</p>
-    </div>
-    <div class="pasos">
-        <div><strong>01</strong><h3>Observar</h3><p>Detectamos un problema real y a quién afecta.</p></div>
-        <div><strong>02</strong><h3>Analizar</h3><p>Buscamos causas, evidencia e impacto.</p></div>
-        <div><strong>03</strong><h3>Diseñar</h3><p>Proponemos una solución práctica y viable.</p></div>
-        <div><strong>04</strong><h3>Probar y medir</h3><p>Hacemos un piloto y comprobamos resultados.</p></div>
-    </div>
-</section>
-
-<section class="seccion" id="invertir">
-    <div class="titulo-seccion">
-        <p class="etiqueta">QUIERO INVERTIR</p>
-        <h2>¿Encontraste una oportunidad y <span>quieres saber si conviene?</span></h2>
-        <p>
-            BizSoft te ayuda a ordenar los números de una oportunidad: precio pedido, precio negociado,
-            valor de referencia, costos adicionales, posible margen, ROI y comprador objetivo.
-            El resultado es un escenario de análisis, no una promesa de ganancia.
-        </p>
-    </div>
-
-    <div class="pasos">
-        <div><strong>01</strong><h3>Oportunidad</h3><p>Qué quieres comprar, para qué y cuánto te piden.</p></div>
-        <div><strong>02</strong><h3>Valoración</h3><p>Precio de referencia, costos y riesgos que debes validar.</p></div>
-        <div><strong>03</strong><h3>Negociación</h3><p>Medimos el descuento conseguido y el precio de entrada.</p></div>
-        <div><strong>04</strong><h3>Retorno</h3><p>Escenarios de margen, ROI y posibles compradores.</p></div>
-    </div>
-
-    <div class="centrar">
-        <button class="boton-secundario" data-pregunta="quiero analizar una inversión">
-            Analizar una inversión
-        </button>
-    </div>
-</section>
-
-<section class="seccion" id="soluciones">
-    <div class="titulo-seccion">
-        <p class="etiqueta">SOLUCIONES BIZSOFT</p>
-        <h2>Del problema al <span>resultado</span></h2>
-    </div>
-    <div class="grid-soluciones">
-        <article class="card"><div class="card-icono">↗</div><h3>Aumentar ventas</h3><p>Leads, automatización comercial y análisis de oportunidades.</p></article>
-        <article class="card"><div class="card-icono">⚙</div><h3>Automatización</h3><p>Procesos más rápidos y eficientes con tecnología.</p></article>
-        <article class="card"><div class="card-icono">👥</div><h3>Potenciar al personal</h3><p>Capacitación, productividad y herramientas digitales.</p></article>
-        <article class="card"><div class="card-icono">🛡</div><h3>Ciberseguridad</h3><p>Riesgos, vulnerabilidades y prevención de amenazas.</p></article>
-    </div>
-</section>
-
-<section class="tecnologia-personalizada" id="tecnologia-personalizada">
-    <div class="tecnologia-contenido">
-        <div class="titulo-seccion">
-            <p class="etiqueta">TECNOLOGÍA PERSONALIZADA</p>
-            <h2>Tecnología diseñada alrededor de <span>tu necesidad</span></h2>
-            <p>
-                No adaptamos tu problema a una herramienta genérica. Diseñamos la tecnología
-                alrededor de tu necesidad, combinando software, inteligencia artificial,
-                automatización y análisis de datos según cada caso.
-            </p>
-        </div>
-
-        <div class="grid-tecnologia">
-            <article class="card-tecnologia">
-                <div class="card-icono">⌨</div>
-                <h3>Software a medida</h3>
-                <p>Sistemas y aplicaciones construidos según el problema, flujo de trabajo y objetivos de cada cliente.</p>
-            </article>
-
-            <article class="card-tecnologia">
-                <div class="card-icono">✦</div>
-                <h3>Inteligencia artificial aplicada</h3>
-                <p>IA adaptada a tareas concretas del negocio, organización, inversión o servicio que se quiere mejorar.</p>
-            </article>
-
-            <article class="card-tecnologia">
-                <div class="card-icono">⚙</div>
-                <h3>Automatización e integraciones</h3>
-                <p>Conectamos herramientas y reducimos tareas repetitivas para ahorrar tiempo y mejorar la operación.</p>
-            </article>
-
-            <article class="card-tecnologia">
-                <div class="card-icono">▦</div>
-                <h3>Datos y analítica</h3>
-                <p>Organizamos información y construimos indicadores que ayuden a comprender problemas y tomar mejores decisiones.</p>
-            </article>
-        </div>
-    </div>
-</section>
-
-<section class="ciberseguridad-seccion" id="ciberseguridad">
-    <div class="ciber-contenido">
-        <div class="titulo-seccion">
-            <p class="etiqueta">CIBERSEGURIDAD Y PREVENCIÓN DIGITAL</p>
-            <h2>La tecnología también debe <span>proteger</span></h2>
-            <p>
-                Usamos tecnología y hacking ético para prevenir amenazas, detectar actividades sospechosas,
-                analizar incidentes y fortalecer la seguridad digital de personas y organizaciones.
-                Contribuimos a combatir fraudes y ciberdelitos mediante prevención, análisis técnico y
-                manejo responsable de evidencias digitales.
-            </p>
-        </div>
-
-        <div class="grid-ciber">
-            <article class="card-ciber">
-                <div class="card-icono">🛡</div>
-                <h3>Prevención y protección</h3>
-                <p>Evaluamos riesgos, configuraciones y controles para reducir la exposición a amenazas digitales.</p>
-            </article>
-
-            <article class="card-ciber">
-                <div class="card-icono">⌁</div>
-                <h3>Hacking ético</h3>
-                <p>Pruebas autorizadas y análisis de vulnerabilidades para encontrar debilidades antes de que sean aprovechadas.</p>
-            </article>
-
-            <article class="card-ciber">
-                <div class="card-icono">🔎</div>
-                <h3>Fraude e incidentes</h3>
-                <p>Apoyo técnico para identificar señales de fraude, organizar hallazgos y documentar incidentes de forma responsable.</p>
-            </article>
-
-            <article class="card-ciber">
-                <div class="card-icono">🎓</div>
-                <h3>Capacitación</h3>
-                <p>Concientización sobre phishing, suplantación, ingeniería social, contraseñas y buenas prácticas de seguridad.</p>
-            </article>
-        </div>
-
-        <div class="ciber-llamada">
-            <p><strong>Hacking ético · Vulnerabilidades · Prevención de fraude · Incidentes · Evidencia digital · Capacitación</strong></p>
-            <button class="boton-secundario" data-pregunta="quiero mejorar mi ciberseguridad">Analizar un riesgo digital</button>
-        </div>
-
-        <div class="antifraude-box">
-            <div>
-                <p class="etiqueta">BIZSOFT ANTIFRAUDE</p>
-                <h3>Tecnología para detectar el engaño antes de que se convierta en una víctima</h3>
-                <p>
-                    Analizamos señales de phishing, suplantación, páginas falsas, anuncios engañosos y otros posibles fraudes digitales.
-                    Ayudamos a organizar indicadores y evidencias para que la persona u organización pueda reportar el caso por los canales correspondientes.
-                </p>
-            </div>
-            <div class="antifraude-pasos">
-                <span><strong>01</strong> Detectar</span>
-                <span><strong>02</strong> Analizar</span>
-                <span><strong>03</strong> Preservar evidencia</span>
-                <span><strong>04</strong> Alertar y reportar</span>
-            </div>
-            <p class="antifraude-nota">
-                BizSoft trabaja desde la prevención y el análisis técnico. No accedemos sin autorización a sistemas ajenos ni sustituimos la investigación de las autoridades.
-            </p>
-            <button class="boton-secundario" data-pregunta="quiero analizar un posible fraude digital">Analizar posible fraude</button>
-        </div>
-    </div>
-</section>
-
-<section class="sectores">
-    <article class="sector empresas" id="empresas">
-        <p class="etiqueta">EMPRESAS</p>
-        <h2>Ayudamos a <span>hacer crecer negocios</span></h2>
-        <p>Tecnología y estrategia para conseguir clientes, mejorar procesos y tomar mejores decisiones.</p>
-        <ul>
-            <li>Generación de oportunidades comerciales</li>
-            <li>Automatización de ventas</li>
-            <li>Desarrollo de sistemas</li>
-            <li>Análisis de información</li>
-            <li>Capacitación del personal</li>
-        </ul>
-    </article>
-
-    <article class="sector estado" id="estado">
-        <p class="etiqueta etiqueta-blanca">ESTADO Y CIUDADANÍA</p>
-        <h2>Tecnología para <strong>mejorar el Estado y fortalecer al ciudadano</strong></h2>
-        <p>Ayudamos a entidades públicas a mejorar su gestión, personal y políticas públicas; y desarrollamos herramientas que permitan al ciudadano informarse, fiscalizar, documentar problemas y participar de manera responsable en la mejora de los servicios públicos.</p>
-        <div class="estado-doble">
-            <div>
-                <h3>🏛 Para entidades públicas</h3>
-                <ul>
-                    <li>Modernización y digitalización</li>
-                    <li>Automatización de trámites</li>
-                    <li>Capacitación y fortalecimiento del personal</li>
-                    <li>Mejora del servicio al ciudadano</li>
-                    <li>Indicadores de gestión</li>
-                    <li>Políticas públicas basadas en evidencia</li>
-                </ul>
-            </div>
-            <div>
-                <h3>👥 Para ciudadanos</h3>
-                <ul>
-                    <li>Herramientas de vigilancia y fiscalización ciudadana</li>
-                    <li>Organización cronológica de evidencias</li>
-                    <li>Seguimiento de solicitudes, reclamos y respuestas</li>
-                    <li>Acceso y análisis de información pública</li>
-                    <li>Seguimiento de problemas y compromisos públicos</li>
-                    <li>Participación ciudadana apoyada por tecnología</li>
-                </ul>
-            </div>
-        </div>
-        <button class="boton-estado" data-pregunta="quiero analizar un problema público">Analizar un problema público</button>
-    </article>
-</section>
-
-<section class="contacto-wrap" id="contacto">
-    <div class="titulo-seccion">
-        <p class="etiqueta">CONTACTO</p>
-        <h2>Convirtamos tu problema en <span>una solución</span></h2>
-        <p>Déjanos tus datos y cuéntanos qué problema has observado o qué resultado quieres conseguir.</p>
-    </div>
-
-    <form id="leadForm" class="lead-form">
-        <div id="origenDiagnostico" class="origen-diagnostico" hidden>
-            <strong>Solicitud desde el Asistente BizSoft</strong>
-            <p>Hemos trasladado tu diagnóstico al formulario para que puedas solicitar la implementación.</p>
-        </div>
-        <div class="dos-columnas">
-            <label>Nombre*
-                <input name="nombre" required placeholder="Tu nombre">
-            </label>
-            <label>Empresa o proyecto
-                <input name="empresa" placeholder="Opcional">
-            </label>
-            <label>Correo
-                <input name="email" type="email" placeholder="tu@correo.com">
-            </label>
-            <label>Teléfono / WhatsApp
-                <input name="telefono" placeholder="+51 ...">
-            </label>
-        </div>
-        <label>¿Qué problema quieres resolver?*
-            <textarea name="necesidad" required rows="5" placeholder="Ejemplo: mis clientes tardan en cotizar, pierdo ventas o un trámite demora demasiado"></textarea>
-        </label>
-        <button type="submit">Enviar solicitud</button>
-        <p id="leadEstado" class="lead-estado"></p>
-    </form>
-</section>
+<section class="contacto-wrap contacto-v11" id="contacto"><div class="titulo-seccion"><p class="etiqueta">HABLEMOS DE TU PROYECTO</p><h2>¿Tienes un problema en <span>tu negocio?</span></h2><p>Cuéntanos qué está ocurriendo. Primero analizamos el problema y después definimos qué tecnología tendría sentido implementar.</p></div>
+<form id="leadForm" class="lead-form"><div id="origenDiagnostico" class="origen-diagnostico" hidden><strong>Solicitud desde el Asistente BizSoft</strong><p>Hemos trasladado tu diagnóstico al formulario para que puedas solicitar la implementación.</p></div><div class="dos-columnas"><label>Nombre*<input name="nombre" required placeholder="Tu nombre"></label><label>Empresa o proyecto<input name="empresa" placeholder="Opcional"></label><label>Correo<input name="email" type="email" placeholder="tu@correo.com"></label><label>Teléfono / WhatsApp<input name="telefono" placeholder="+51 ..."></label></div><label>¿Qué problema quieres resolver?*<textarea name="necesidad" required rows="5" placeholder="Cuéntanos brevemente qué problema tiene tu negocio"></textarea></label><button type="submit">Enviar solicitud</button><p id="leadEstado" class="lead-estado"></p></form></section>
 </main>
-
-<footer>
-    <div class="footer-marca">
-        <img src="{% static 'web/img/logo-bizzsoft-escudo-blanco-v6.png' %}?v=6" alt="BizSoft">
-        <div><h3>BizSoft</h3><p>Tecnología, negocios y gestión pública.</p></div>
-    </div>
-    <p>© 2026 BizSoft • Perú</p>
-</footer>
-
+<footer><div class="footer-marca"><img src="{% static 'web/img/logo-bizzsoft-escudo-blanco-v6.png' %}?v=6" alt="BizSoft"><div><h3>BizSoft</h3><p>Tecnología para resolver problemas empresariales.</p></div></div><p>© 2026 BizSoft • Perú</p></footer>
 <script src="{% static 'web/js/main.js' %}"></script>
 </body>
 </html>
-test
 
 <!-- Modal demostrativo: Predictor de Ventas -->
 <div class="predictor-modal" id="predictor-modal" hidden>
