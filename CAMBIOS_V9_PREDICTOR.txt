@@ -1,0 +1,6 @@
+BizSoft V9 - Predictor de ventas
+- Se agregó una cuarta herramienta demostrativa: Predictor de Ventas.
+- El visitante ingresa seis meses de ventas y recibe una estimación orientativa del siguiente periodo.
+- La demo usa una tendencia lineal local y aclara que no garantiza resultados futuros.
+- Incluye CTA para solicitar un sistema predictivo personalizado para la empresa.
+- Se conservan las funciones y secciones de V8.
