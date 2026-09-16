@@ -1,0 +1,12 @@
+BIZSOFT V12 — PORTADA ENFOCADA EN CONTRATACIÓN
+
+- Hero reescrito desde la perspectiva del problema y beneficio empresarial.
+- CTA principal: Analizar mi negocio / Solicitar una solución.
+- Nueva sección de 5 necesidades empresariales: clientes, automatización, datos, protección y software personalizado.
+- Cada necesidad se conecta con el Asistente BizSoft mediante data-pregunta.
+- Capacidades tecnológicas resumidas para evitar saturación.
+- Demos presentadas como prueba de capacidad, no como una lista de tecnologías.
+- Sectores se mantienen como ejemplos de aplicación.
+- Nuevo bloque de conversión antes del formulario.
+- Formulario presentado como solicitud de contacto/solución.
+- Se conserva backend, endpoints, PostgreSQL/Supabase, leads, admin, seguridad y JS existente.
