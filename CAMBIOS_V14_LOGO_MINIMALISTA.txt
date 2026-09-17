@@ -1,0 +1,7 @@
+BIZSOFT V14 - LOGO MINIMALISTA
+
+- Se reemplazó el escudo anterior por el símbolo minimalista refinado (Versión C).
+- El nuevo símbolo se usa en el encabezado y pie de página.
+- Se añadió favicon con la nueva identidad.
+- Se mantiene el nombre BizSoft junto al símbolo en el encabezado.
+- No se modificaron backend, asistente, leads, Supabase, Admin ni seguridad.
