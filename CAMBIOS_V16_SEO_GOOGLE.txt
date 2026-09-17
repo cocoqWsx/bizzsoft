@@ -1,0 +1,16 @@
+BIZSOFT V16 — VISIBILIDAD Y SEO
+
+- Título y descripción SEO orientados a empresas en Perú.
+- Canonical dinámico.
+- Open Graph y Twitter/X Card para compartir enlaces.
+- Datos estructurados Schema.org Organization.
+- /robots.txt y /sitemap.xml.
+- Admin y APIs excluidos del rastreo en robots.txt.
+- Backend comercial, modelos, Supabase y leads conservados.
+
+DESPUÉS DE PUBLICAR
+1. Verifica /robots.txt
+2. Verifica /sitemap.xml
+3. Añade el sitio a Google Search Console.
+4. Envía el sitemap.
+5. Solicita indexación de la portada con Inspección de URL.
