@@ -23,6 +23,14 @@ def inicio(request):
     return render(request, "web/index.html", {"canonical_url": canonical_url, "social_image_url": social_image_url, "structured_data": structured_data})
 
 
+
+def google_site_verification(request):
+    return HttpResponse(
+        "google-site-verification: google72049cf8fcf9f3a0.html",
+        content_type="text/html; charset=utf-8",
+    )
+
+
 def robots_txt(request):
     content = f"User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\n\nSitemap: {request.build_absolute_uri('/sitemap.xml')}\n"
     return HttpResponse(content, content_type="text/plain; charset=utf-8")

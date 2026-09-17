@@ -1,0 +1,10 @@
+BIZSOFT V17 — VERIFICACIÓN GOOGLE SEARCH CONSOLE
+
+- Añadida la URL /google72049cf8fcf9f3a0.html
+- Devuelve exactamente el contenido entregado por Google Search Console.
+- Mantiene SEO, sitemap.xml y robots.txt de V16.
+- No se modificó la lógica de leads, asistente, Supabase ni Admin.
+
+Después del deploy, comprobar:
+https://bizzsoft.onrender.com/google72049cf8fcf9f3a0.html
+Luego pulsar VERIFICAR en Google Search Console.
