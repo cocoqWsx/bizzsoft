@@ -1,0 +1,6 @@
+BizSoft V13 — Logo más limpio en portada
+
+- Se eliminó el escudo grande del centro de la portada.
+- Se mantiene el escudo junto al nombre BizSoft en la barra superior para conservar identificación de marca.
+- Se redujo ligeramente el espacio superior del hero para que el mensaje comercial aparezca antes.
+- No se modificó el backend, el asistente, los leads, Supabase/PostgreSQL, Admin ni las demos.
