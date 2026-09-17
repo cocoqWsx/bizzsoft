@@ -1,0 +1,9 @@
+BIZSOFT V15 — FILOSOFÍA DE PRODUCTO
+
+- Mantiene el logo minimalista de V14.
+- Amplía la propuesta: BizSoft parte del problema, no de una tecnología específica.
+- Hero actualizado para incluir software, IA, automatización, datos, ciberseguridad y hardware cuando corresponda.
+- “Necesito un sistema” cambia a “Necesito una solución tecnológica”.
+- Se añade integración con hardware como capacidad, sin convertirla en el foco principal.
+- Método actualizado: Observar → Analizar → Diseñar → Integrar tecnología → Probar y medir.
+- Backend, Supabase, leads, admin, asistente y seguridad se mantienen.
