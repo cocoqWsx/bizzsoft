@@ -1,0 +1,11 @@
+BizSoft V18 — Posicionamiento orgánico
+
+Se añadieron 5 páginas indexables, cada una con título, meta descripción, canonical y contenido propio:
+/software-para-empresas/
+/automatizacion-empresarial/
+/inteligencia-artificial-para-empresas/
+/ciberseguridad-para-empresas/
+/software-para-talleres/
+
+El sitemap.xml ahora incluye la portada y las cinco páginas nuevas (6 URLs en total).
+Se conservaron Google Search Console, verificación HTML, robots.txt, asistente, leads, Supabase, Admin y seguridad.
