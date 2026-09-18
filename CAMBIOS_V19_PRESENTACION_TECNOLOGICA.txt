@@ -1,0 +1,25 @@
+BIZSOFT V19 — PRESENTACIÓN TECNOLÓGICA
+
+Objetivo
+- Modernizar la portada con una narrativa visual de producto: titulares grandes, espacios amplios y bloques de capacidades.
+- Inspiración conceptual en páginas tecnológicas premium, manteniendo identidad propia BizSoft rojo/blanco.
+
+Cambios
+- Hero más limpio y de mayor impacto visual.
+- Nueva narrativa: Crecimiento, Automatización, Inteligencia y Protección.
+- Capacidades en bloques grandes: software, IA, datos, ciberseguridad, hardware y procesos.
+- Enlaces internos visibles hacia las páginas SEO de V18.
+- Se conservan sectores, demos, Método BizSoft, formulario de contacto y predictor.
+- Diseño responsive para escritorio y móvil.
+
+Se conserva
+- 6 URLs del sitemap V18.
+- Google Search Console y archivo de verificación.
+- robots.txt y sitemap.xml.
+- SEO/metadatos de la portada.
+- API del asistente y leads.
+- Supabase/PostgreSQL.
+- Django Admin y configuración de seguridad.
+
+Nota
+La V19 toma principios generales de presentación (simplicidad, jerarquía visual y narrativa progresiva), sin copiar recursos, textos o diseño propietario de Apple.
