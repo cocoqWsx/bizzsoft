@@ -1,0 +1,12 @@
+BIZSOFT V20 — APPS MÓVILES
+
+- Se añade Aplicaciones móviles como capacidad visible de BizSoft.
+- Nuevo bloque 05 · APPS MÓVILES en la presentación principal.
+- Nuevo acceso rápido “Quiero una app móvil” en el Asistente BizSoft.
+- Nueva tarjeta de capacidad: Aplicaciones móviles.
+- Nueva página SEO: /desarrollo-apps-empresas/
+- Sitemap ampliado de 6 a 7 URLs.
+- Metadatos de portada actualizados para incluir aplicaciones móviles.
+- Se preservan Search Console, robots.txt, Supabase, leads, Admin, demos, seguridad y las páginas SEO anteriores.
+
+Posicionamiento: BizSoft diseña apps para Android y iPhone conectadas con software, datos, IA y automatización según la necesidad del negocio.

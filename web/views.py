@@ -17,7 +17,7 @@ def inicio(request):
     structured_data = json.dumps({
         "@context": "https://schema.org", "@type": "Organization", "name": "BizSoft",
         "url": canonical_url, "logo": social_image_url,
-        "description": "Soluciones tecnológicas para empresas con software, inteligencia artificial, automatización, análisis de datos y ciberseguridad.",
+        "description": "Soluciones tecnológicas para empresas con software, aplicaciones móviles, inteligencia artificial, automatización, análisis de datos y ciberseguridad.",
         "areaServed": {"@type": "Country", "name": "Perú"}
     }, ensure_ascii=False)
     return render(request, "web/index.html", {"canonical_url": canonical_url, "social_image_url": social_image_url, "structured_data": structured_data})
@@ -37,7 +37,7 @@ def robots_txt(request):
 
 
 def sitemap_xml(request):
-    paths = ["/", "/software-para-empresas/", "/automatizacion-empresarial/", "/inteligencia-artificial-para-empresas/", "/ciberseguridad-para-empresas/", "/software-para-talleres/"]
+    paths = ["/", "/software-para-empresas/", "/desarrollo-apps-empresas/", "/automatizacion-empresarial/", "/inteligencia-artificial-para-empresas/", "/ciberseguridad-para-empresas/", "/software-para-talleres/"]
     entries = []
     for i, path in enumerate(paths):
         priority = "1.0" if path == "/" else "0.8"
@@ -68,6 +68,15 @@ def captar_lead(request):
     return JsonResponse({"ok": True, "mensaje": "Gracias. Hemos registrado tu solicitud y podremos contactarte con los datos que dejaste.", "lead_id": lead.id})
 
 SEO_PAGES = {
+    "desarrollo-apps-empresas": {
+        "title": "Desarrollo de apps para empresas en Perú | BizSoft",
+        "description": "Desarrollo de aplicaciones móviles para empresas en Perú. BizSoft diseña apps para Android y iPhone conectadas con clientes, operaciones, datos y sistemas empresariales.",
+        "eyebrow": "APLICACIONES MÓVILES PARA EMPRESAS",
+        "h1": "Apps diseñadas alrededor de tu negocio",
+        "intro": "Diseñamos aplicaciones móviles cuando una app es la mejor forma de acercar un servicio al cliente, acompañar al equipo o llevar una operación al teléfono. La aplicación se integra con los procesos y sistemas que realmente necesita tu empresa.",
+        "items": [("Apps para clientes", "Reservas, pedidos, seguimiento, promociones y servicios desde el móvil."), ("Apps para equipos", "Operaciones, visitas, incidencias, inventario y tareas desde cualquier lugar."), ("Android y iPhone", "Diseñamos soluciones móviles preparadas para los principales ecosistemas de smartphones."), ("Integración empresarial", "Conectamos la app con APIs, bases de datos, software, IA y automatizaciones cuando el proyecto lo requiere.")],
+        "problem": "¿Tu empresa necesita llevar un servicio, proceso o experiencia directamente al teléfono de clientes o colaboradores?",
+    },
     "software-para-empresas": {
         "title": "Software para empresas en Perú | BizSoft",
         "description": "Diseñamos software para empresas en Perú: sistemas de gestión, soluciones a medida, integraciones y herramientas para mejorar operaciones y ventas.",
