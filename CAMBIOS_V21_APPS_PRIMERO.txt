@@ -1,0 +1,9 @@
+BIZSOFT V21 — APPS COMO ESPECIALIDAD PRINCIPAL
+
+- La portada posiciona BizSoft principalmente como empresa de desarrollo de aplicaciones móviles para empresas.
+- Nuevo mensaje: problemas de negocio -> aplicaciones móviles.
+- Android y iPhone aparecen como propuesta principal.
+- IA, software, automatización, datos, ciberseguridad y hardware se mantienen como tecnologías que pueden integrarse dentro de las apps.
+- Se añadió un bloque de producto demostrativo: BizSoft Taller.
+- Se conservan las rutas SEO, sitemap, Search Console, leads, Supabase, Admin, demos y seguridad.
+- La página /desarrollo-apps-empresas/ se mantiene para posicionamiento orgánico.
