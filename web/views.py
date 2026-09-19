@@ -17,7 +17,7 @@ def inicio(request):
     structured_data = json.dumps({
         "@context": "https://schema.org", "@type": "Organization", "name": "BizSoft",
         "url": canonical_url, "logo": social_image_url,
-        "description": "Soluciones tecnológicas para empresas con software, aplicaciones móviles, inteligencia artificial, automatización, análisis de datos y ciberseguridad.",
+        "description": "Desarrollo de aplicaciones móviles para empresas, integradas con software, inteligencia artificial, automatización, datos y ciberseguridad.",
         "areaServed": {"@type": "Country", "name": "Perú"}
     }, ensure_ascii=False)
     return render(request, "web/index.html", {"canonical_url": canonical_url, "social_image_url": social_image_url, "structured_data": structured_data})
