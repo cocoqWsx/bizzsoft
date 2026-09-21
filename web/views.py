@@ -32,8 +32,16 @@ def google_site_verification(request):
 
 
 def robots_txt(request):
-    content = f"User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /api/\n\nSitemap: {request.build_absolute_uri('/sitemap.xml')}\n"
-    return HttpResponse(content, content_type="text/plain; charset=utf-8")
+    # Sitio público: permitir el rastreo de Google y otros buscadores.
+    content = (
+        "User-agent: *\n"
+        "Allow: /\n\n"
+        f"Sitemap: {request.build_absolute_uri('/sitemap.xml')}\n"
+    )
+    response = HttpResponse(content, content_type="text/plain; charset=utf-8")
+    # Evita que un robots.txt anterior quede servido desde caché durante el despliegue.
+    response["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    return response
 
 
 def sitemap_xml(request):

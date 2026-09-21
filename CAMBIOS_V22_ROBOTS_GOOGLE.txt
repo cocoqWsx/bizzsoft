@@ -1,0 +1,16 @@
+BIZSOFT V22 - CORRECCIÓN ROBOTS.TXT PARA GOOGLE
+
+- robots.txt permite rastrear todo el sitio público con Allow: /.
+- Se mantiene la referencia a /sitemap.xml.
+- Se añaden cabeceras no-cache al robots.txt para evitar servir una versión anterior durante el despliegue.
+
+Después de desplegar en Render, comprobar:
+https://bizzsoft.onrender.com/robots.txt
+
+Debe mostrar:
+User-agent: *
+Allow: /
+
+Sitemap: https://bizzsoft.onrender.com/sitemap.xml
+
+Después, en Google Search Console, usar Probar URL publicada y, si está disponible para Google, Solicitar indexación.
