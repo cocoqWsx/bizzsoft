@@ -369,3 +369,21 @@ body{background:#fff;color:#171717}
 footer{padding:45px 24px!important}
 @media(max-width:850px){.hero h1{letter-spacing:-2.5px!important}.v19-feature{min-height:460px;padding:36px;border-radius:28px}.v19-capabilities-grid{grid-template-columns:1fr}.v19-feature h3{letter-spacing:-1.5px}.menu{display:none!important}}
 @media(max-width:560px){.hero{padding:78px 18px 55px!important}.hero h1{font-size:48px!important;letter-spacing:-2px!important}.v19-intro{padding:75px 18px 35px}.v19-story{padding:25px 14px 70px}.v19-feature{padding:28px;min-height:420px}.v19-feature h3{font-size:40px}.v19-feature p{font-size:17px}.v19-capabilities{padding:75px 16px}.v19-capability{padding:28px}.navbar{padding-left:14px!important;padding-right:14px!important}.boton-cotizar{font-size:12px!important}}
+
+
+/* BizSoft: investigación e innovación, versión 1 */
+.biz-investigacion{background:#fff;padding:88px 24px 96px;scroll-margin-top:90px}
+.biz-investigacion-intro{max-width:940px;margin:0 auto 34px;text-align:center}
+.biz-investigacion-intro h2{font-size:clamp(30px,4.5vw,52px);letter-spacing:-1.5px;line-height:1.13;margin:15px 0 18px;color:#202124}
+.biz-investigacion-intro>p:last-child{color:#5f6368;font-size:17px;line-height:1.75}
+.biz-investigacion-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:1100px;margin:auto}
+.biz-proyecto{border:1px solid #ececec;border-radius:24px;padding:30px;background:#fff;box-shadow:0 8px 30px rgba(0,0,0,.035)}
+.biz-proyecto-icon{display:inline-grid;place-items:center;width:52px;height:52px;border-radius:16px;background:#fff0f1;color:#c40018;font-size:28px;margin-bottom:20px}
+.biz-estado{display:inline-block;color:#8d3b40;background:#fff3f3;border-radius:999px;padding:7px 11px;font-size:12px;font-weight:700;margin-left:8px}
+.biz-estado-servicio{color:#265c45;background:#eaf7ef}
+.biz-proyecto h3{font-size:22px;line-height:1.25;margin:5px 0 12px}
+.biz-proyecto p{color:#5f6368;line-height:1.7;font-size:15px}
+.biz-investigacion-cta{max-width:1100px;margin:32px auto 0;padding:26px;border-radius:22px;background:#fafafa;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.biz-investigacion-cta p{font-size:19px;font-weight:700}
+.biz-investigacion-cta a{display:inline-block;text-align:center}
+@media(max-width:760px){.biz-investigacion{padding:65px 16px}.biz-investigacion-grid{grid-template-columns:1fr}.biz-proyecto{padding:24px}.biz-investigacion-cta{flex-direction:column;text-align:center}.biz-estado{margin-left:0}}
