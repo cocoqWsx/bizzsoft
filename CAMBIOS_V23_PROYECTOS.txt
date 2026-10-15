@@ -1,0 +1,1 @@
+V23: Menú Inicio, Servicios, Proyectos, Nosotros, Contacto. Cuatro proyectos con imágenes ilustrativas locales y estados solicitados. Se conservan asistente, formulario, rutas y scripts. Las etiquetas Terminado son las solicitadas por el propietario; no certifican funcionalidad.

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BizSoft | Desarrollo de apps para empresas en Perú</title>
+    <title>BizSoft | Tecnología y soluciones digitales en Perú</title>
     <link rel="icon" type="image/png" href="{% static 'web/img/favicon-bizsoft-v14.png' %}?v=14">
     <meta name="description" content="BizSoft diseña y desarrolla aplicaciones móviles para empresas en Perú, conectadas con software, inteligencia artificial, automatización, datos y ciberseguridad.">
     <meta name="robots" content="index, follow, max-image-preview:large">
@@ -28,17 +28,17 @@
 <header class="header">
     <nav class="navbar">
         <a class="marca" href="#inicio"><img class="logo-header" src="{% static 'web/img/logo-bizsoft-innovacion-v1.png' %}?v=1" alt="Logo BizSoft"><span>BizSoft</span></a>
-        <div class="menu"><a href="#inicio">Inicio</a><a href="#soluciones">Soluciones</a><a href="#investigacion">Investigación e innovación</a><a href="#sectores">Sectores</a><a href="#herramientas">Demos</a><a href="#metodo">Cómo trabajamos</a><a href="#contacto">Contacto</a></div>
+        <div class="menu"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></div>
         <a class="boton-cotizar" href="#contacto">Solicitar una solución</a>
     </nav>
 </header>
 <main>
 <section class="hero" id="inicio">
-    <p class="etiqueta">TECNOLOGÍA · INTELIGENCIA ARTIFICIAL · INNOVACIÓN</p>
-    <h1>Investigamos problemas reales. <span>Desarrollamos soluciones tecnológicas.</span></h1>
-    <p class="hero-subtitulo-comercial">Creamos tecnología personalizada para personas, empresas e instituciones. Exploramos la inteligencia artificial, las aplicaciones y el análisis de datos para resolver necesidades reales.</p>
-    <p class="hero-descripcion">Escuchamos tu problema, investigamos sus causas y evaluamos soluciones útiles. Desarrollamos aplicaciones, software y automatizaciones; también exploramos nuevas herramientas de IA para finanzas personales, seguridad digital y transparencia pública. Los proyectos en investigación aún no son productos disponibles.</p>
-    <div class="hero-acciones"><a class="btn-principal-comercial" href="#asistente-comercial">Cuéntanos tu problema</a><a class="btn-secundario-comercial" href="/desarrollo-apps-empresas/">Ver desarrollo de apps</a></div>
+    <p class="etiqueta">BIZSOFT · TECNOLOGÍA PARA EMPRESAS</p>
+    <h1>Tecnología que transforma <span>ideas en soluciones.</span></h1>
+    <p class="hero-subtitulo-comercial">Desarrollamos aplicaciones móviles, software empresarial y soluciones con inteligencia artificial para resolver problemas reales.</p>
+    <p class="hero-descripcion">Ayudamos a negocios e instituciones a mejorar sus procesos, conectar sus operaciones y aprovechar la tecnología.</p>
+    <div class="hero-acciones"><a class="btn-principal-comercial" href="#asistente-comercial">Cuéntanos tu problema</a><a class="btn-secundario-comercial" href="#proyectos">Ver proyectos</a></div>
 
     <div class="asistente-box" id="asistente-comercial">
         <div id="chat" class="chat"><div class="mensaje bot mensaje-con-avatar"><img class="avatar-asistente" src="{% static 'web/img/asistente-bizsoft-robot.png' %}" alt="Asistente BizSoft"><div><strong>Asistente BizSoft:</strong> Cuéntame qué problema tiene tu negocio. No necesitas saber qué tecnología necesitas; primero analizamos el problema.</div></div></div>
@@ -49,68 +49,37 @@
 </section>
 
 
-<section class="biz-investigacion" id="investigacion" aria-labelledby="investigacion-titulo">
-  <div class="biz-investigacion-intro">
-    <p class="etiqueta">LABORATORIO DE IDEAS · BIZSOFT</p>
-    <h2 id="investigacion-titulo">Investigamos hoy las soluciones del mañana.</h2>
-    <p>Exploramos aplicaciones personalizadas, inteligencia artificial y análisis de datos para responder a problemas cotidianos. Las siguientes iniciativas están <strong>en investigación</strong>: no son servicios operativos ni productos terminados.</p>
+<section class="biz-proyectos-section" id="proyectos" aria-labelledby="proyectos-titulo">
+  <div class="biz-proyectos-intro"><p class="v19-kicker">PROYECTOS BIZSOFT</p><h2 id="proyectos-titulo">Tecnología que estamos construyendo.</h2><p>Conoce nuestras soluciones y líneas de desarrollo para negocios, personas e instituciones.</p></div>
+  <div class="biz-proyectos-grid">
+    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-taller.svg' %}" alt="Ilustración de BizSoft Taller" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status listo">Terminado</span><h3>BizSoft Taller</h3><p>Aplicación para gestionar talleres mecánicos, clientes, vehículos, órdenes de trabajo y mantenimientos.</p><a href="#contacto">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
+    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-antifraude.svg' %}" alt="Ilustración de BizSoft Antifraude IA" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status listo">Terminado</span><h3>BizSoft Antifraude IA</h3><p>Herramienta para analizar enlaces y sitios web e identificar posibles señales de fraude digital.</p><a href="#contacto">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
+    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-finanzas.svg' %}" alt="Ilustración de BizSoft Finanzas IA" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status desarrollo">En desarrollo</span><h3>BizSoft Finanzas IA</h3><p>Asistente inteligente para organizar ingresos, gastos, presupuestos y decisiones financieras.</p><a href="#contacto">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
+    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-transparencia.svg' %}" alt="Ilustración de BizSoft Transparencia" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status desarrollo">En desarrollo</span><h3>BizSoft Transparencia</h3><p>Tecnología para analizar información pública e identificar posibles irregularidades para revisión humana.</p><a href="#contacto">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
   </div>
-  <div class="biz-investigacion-grid">
-    <article class="biz-proyecto"><span class="biz-proyecto-icon" aria-hidden="true">◉</span><span class="biz-estado">En investigación</span><h3>Finanzas personales inteligentes</h3><p>Estudiamos herramientas que ayuden a organizar gastos, planificar presupuestos y entender mejor las decisiones financieras personales.</p></article>
-    <article class="biz-proyecto"><span class="biz-proyecto-icon" aria-hidden="true">◇</span><span class="biz-estado">En investigación</span><h3>Detección de páginas fraudulentas</h3><p>Exploramos métodos para analizar señales de riesgo en sitios web y advertir sobre posibles intentos de fraude. Ningún detector garantiza seguridad absoluta.</p></article>
-    <article class="biz-proyecto"><span class="biz-proyecto-icon" aria-hidden="true">▤</span><span class="biz-estado">En investigación</span><h3>Tecnología para la transparencia</h3><p>Investigamos sistemas que analicen datos públicos y ayuden a identificar anomalías para revisión humana, sin atribuir delitos automáticamente.</p></article>
-    <article class="biz-proyecto"><span class="biz-proyecto-icon" aria-hidden="true">✦</span><span class="biz-estado biz-estado-servicio">Servicio disponible</span><h3>Desarrollo de soluciones personalizadas</h3><p>Diseño y desarrollo de aplicaciones, sistemas web y automatizaciones según las necesidades de cada organización.</p></article>
-  </div>
-  <div class="biz-investigacion-cta"><p>¿Tienes un problema que podría resolverse con tecnología?</p><a class="btn-principal-comercial" href="#contacto">Conversemos sobre tu proyecto</a></div>
 </section>
 
-<section class="v19-intro" id="soluciones">
+<section class="v19-intro" id="servicios">
   <div class="v19-intro-inner">
-    <p class="v19-kicker">BIZSOFT · APPS PARA EMPRESAS</p>
-    <h2>Tu negocio puede vivir en una app.</h2>
-    <p>Creamos aplicaciones útiles, simples y conectadas con la operación real de la empresa. La IA, la automatización y los datos se integran cuando ayudan a resolver mejor el problema.</p>
+    <p class="v19-kicker">SERVICIOS BIZSOFT</p>
+    <h2>Soluciones digitales para hacer crecer tu negocio.</h2>
+    <p>Diseñamos aplicaciones móviles, software a medida, automatización e inteligencia artificial según las necesidades de cada empresa.</p>
   </div>
-</section>
-
-<section class="v19-story" aria-label="Soluciones BizSoft">
-  <article class="v19-feature v19-feature-light">
-    <div><span class="v19-feature-number">01 · CRECIMIENTO</span><h3>Más oportunidades. Más capacidad para vender.</h3><p>Organizamos oportunidades comerciales, seguimiento de clientes y datos de ventas para ayudarte a detectar dónde puede crecer tu negocio.</p></div>
-    <div class="v19-feature-action"><button class="demo-boton" data-pregunta="mi empresa necesita conseguir más clientes y quiero analizar cómo mejorar mis ventas">Analizar mis ventas</button></div>
-  </article>
-  <article class="v19-feature v19-feature-red">
-    <div><span class="v19-feature-number">02 · AUTOMATIZACIÓN</span><h3>Menos trabajo repetitivo. Más tiempo para avanzar.</h3><p>Automatizamos tareas, registros, alertas e integraciones para que las personas puedan concentrarse en el trabajo que realmente necesita criterio.</p></div>
-    <div class="v19-feature-action"><button class="demo-boton" data-pregunta="mi empresa pierde tiempo en tareas manuales y quiero analizar qué podemos automatizar">Descubrir qué automatizar</button></div>
-  </article>
-  <article class="v19-feature v19-feature-soft">
-    <div><span class="v19-feature-number">03 · INTELIGENCIA</span><h3>IA y datos que trabajan con tu negocio.</h3><p>Asistentes, analítica y herramientas predictivas diseñadas para convertir información dispersa en acciones y decisiones más claras.</p></div>
-    <div class="v19-feature-action"><button class="demo-boton" data-pregunta="mi empresa tiene datos y quiero usar inteligencia artificial para aprovecharlos mejor">Explorar IA para mi empresa</button></div>
-  </article>
-  <article class="v19-feature v19-feature-dark">
-    <div><span class="v19-feature-number">04 · PROTECCIÓN</span><h3>La tecnología también debe proteger.</h3><p>Ciberseguridad defensiva, prevención de fraude y análisis técnico para fortalecer la seguridad digital de tu organización.</p></div>
-    <div class="v19-feature-action"><button class="demo-boton" data-pregunta="quiero proteger mi empresa frente a fraude y riesgos de ciberseguridad">Analizar mi seguridad</button></div>
-  </article>
-  <article class="v19-feature v19-feature-light">
-    <div><span class="v19-feature-number">05 · APPS MÓVILES</span><h3>Tu negocio también puede vivir en una app.</h3><p>Diseñamos aplicaciones móviles para clientes, equipos y operaciones: reservas, pedidos, seguimiento, inventario, servicios, alertas y experiencias conectadas con los sistemas de tu empresa.</p></div>
-    <div class="v19-feature-action"><a class="demo-boton" href="/desarrollo-apps-empresas/">Conocer desarrollo de apps</a></div>
-  </article>
 </section>
 
 <section class="v19-capabilities">
   <div class="v19-capabilities-inner">
-    <div class="v19-capabilities-head"><p class="v19-kicker">UNA APP, DISTINTAS TECNOLOGÍAS</p><h2 class="v19-section-title">Todo lo que una buena app puede conectar.</h2></div>
+    <div class="v19-capabilities-head"><p class="v19-kicker">QUÉ HACEMOS</p><h2 class="v19-section-title">Servicios que se adaptan a tus necesidades.</h2></div>
     <div class="v19-capabilities-grid">
       <article class="v19-capability"><div class="v19-capability-icon">💻</div><h3>Software a medida</h3><p>Sistemas adaptados a la operación y crecimiento de tu empresa.</p><a href="/software-para-empresas/">Conocer software para empresas →</a></article>
       <article class="v19-capability"><div class="v19-capability-icon">📱</div><h3>Aplicaciones móviles</h3><p>Apps para Android y iPhone conectadas con los procesos, clientes y datos de tu empresa.</p><a href="/desarrollo-apps-empresas/">Conocer desarrollo de apps →</a></article>
       <article class="v19-capability"><div class="v19-capability-icon">🤖</div><h3>IA y automatización</h3><p>Automatización, asistentes y soluciones inteligentes aplicadas a problemas concretos.</p><a href="/inteligencia-artificial-para-empresas/">Conocer IA para empresas →</a></article>
-      <article class="v19-capability"><div class="v19-capability-icon">📊</div><h3>Datos y analítica</h3><p>Indicadores, análisis y predicción para convertir datos en información útil.</p><a href="#herramientas">Probar nuestras demos →</a></article>
       <article class="v19-capability"><div class="v19-capability-icon">🛡️</div><h3>Ciberseguridad</h3><p>Prevención, análisis defensivo y protección frente a riesgos y fraude digital.</p><a href="/ciberseguridad-para-empresas/">Conocer ciberseguridad →</a></article>
-      <article class="v19-capability"><div class="v19-capability-icon">🔌</div><h3>Integración con hardware</h3><p>Cuando el proyecto lo necesita, conectamos software con sensores, GPS, lectores y otros dispositivos.</p><a href="#contacto">Cuéntanos tu proyecto →</a></article>
-      <article class="v19-capability"><div class="v19-capability-icon">⚙️</div><h3>Procesos conectados</h3><p>Integramos sistemas y flujos para reducir pasos manuales y mantener la información coordinada.</p><a href="/automatizacion-empresarial/">Conocer automatización →</a></article>
     </div>
   </div>
 </section>
 
-<section class="sectores-v11" id="sectores"><div class="sectores-v11-inner">
+<section class="sectores-v11 biz-oculto" id="sectores"><div class="sectores-v11-inner">
   <div class="titulo-seccion"><p class="etiqueta">SOLUCIONES POR SECTOR</p><h2>Adaptamos la tecnología a <span>cada negocio</span></h2><p>Estos son ejemplos de aplicación. Analizamos primero cómo trabaja cada empresa antes de proponer una implementación.</p></div>
   <div class="sectores-v11-grid">
     <article><div class="sector-v11-icono">🚚</div><h3>Transporte y logística</h3><p>Flota, mantenimiento, entregas, costos y operación.</p><button class="demo-boton" data-pregunta="tengo un negocio de transporte o logística y quiero analizar cómo la tecnología puede mejorarlo">Analizar este sector</button></article>
@@ -120,14 +89,14 @@
   </div>
 </div></section>
 
-<section class="demo-seccion" id="herramientas"><div class="titulo-seccion"><p class="etiqueta">NO SOLO TE CONTAMOS LO QUE PODEMOS HACER</p><h2>Prueba cómo <span>trabaja BizSoft</span></h2><p class="prueba-v12-intro">Estas demostraciones te permiten experimentar algunas de nuestras capacidades antes de conversar sobre una solución para tu empresa.</p></div>
+<section class="demo-seccion biz-oculto" id="herramientas"><div class="titulo-seccion"><p class="etiqueta">NO SOLO TE CONTAMOS LO QUE PODEMOS HACER</p><h2>Prueba cómo <span>trabaja BizSoft</span></h2><p class="prueba-v12-intro">Estas demostraciones te permiten experimentar algunas de nuestras capacidades antes de conversar sobre una solución para tu empresa.</p></div>
 <div class="grid-demos grid-demos-v11">
 <article class="demo-card"><div class="demo-icono">🤖</div><span>DEMO FUNCIONAL</span><h3>Asistente Empresarial</h3><p>Describe un problema de ventas, procesos u operación y obtén un diagnóstico inicial.</p><button class="demo-boton" data-pregunta="quiero analizar un problema de mi negocio">Probar asistente</button></article>
 <article class="demo-card"><div class="demo-icono">🛡️</div><span>DEMO FUNCIONAL</span><h3>BizSoft AntiFraude</h3><p>Organiza señales de phishing, suplantación, páginas falsas o anuncios sospechosos.</p><button class="demo-boton" data-pregunta="quiero analizar un posible fraude digital">Probar AntiFraude</button></article>
 <article class="demo-card"><div class="demo-icono">📈</div><span>DEMO PREDICTIVA</span><h3>Predictor de Ventas</h3><p>Ingresa ventas anteriores y obtén una estimación orientativa mediante una tendencia lineal sencilla.</p><button class="demo-boton" type="button" id="abrir-predictor">Probar predictor</button></article>
 </div></section>
 
-<section class="seccion" id="metodo"><div class="titulo-seccion"><p class="etiqueta">MÉTODO BIZSOFT</p><h2>Primero entendemos. <span>Después construimos.</span></h2><p>La tecnología es una herramienta. El punto de partida es el problema que quieres resolver.</p></div>
+<section class="seccion" id="nosotros"><div class="titulo-seccion"><p class="etiqueta">NOSOTROS</p><h2>Somos BizSoft. <span>Construimos tecnología útil.</span></h2><p>La tecnología es una herramienta. El punto de partida es el problema que quieres resolver.</p></div>
 <div class="pasos pasos-v15"><div><strong>01</strong><h3>Observar</h3><p>Entendemos el problema y a quién afecta.</p></div><div><strong>02</strong><h3>Analizar</h3><p>Revisamos causas, información e impacto.</p></div><div><strong>03</strong><h3>Diseñar</h3><p>Definimos una solución práctica y viable.</p></div><div><strong>04</strong><h3>Integrar tecnología</h3><p>Combinamos las herramientas que realmente necesita el proyecto.</p></div><div><strong>05</strong><h3>Probar y medir</h3><p>Validamos la solución y medimos resultados.</p></div></div></section>
 
 <section class="conversion-v12"><div class="conversion-v12-inner"><p class="etiqueta">DE PROBLEMA A PROYECTO</p><h2>¿Ves una oportunidad de mejora en <span>tu empresa?</span></h2><p>Cuéntanos el problema. BizSoft puede analizar tu caso y, si existe una solución tecnológica viable, conversar contigo sobre su desarrollo e implementación.</p><div class="hero-acciones"><a class="btn-principal-comercial" href="#asistente-comercial">Quiero crear mi app</a><a class="btn-secundario-comercial" href="/desarrollo-apps-empresas/">Ver desarrollo de apps</a></div><p class="microconfianza-v12">Primero entendemos tu necesidad. Después definimos alcance, tecnología e implementación.</p></div></section>

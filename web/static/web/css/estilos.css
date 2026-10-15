@@ -387,3 +387,24 @@ footer{padding:45px 24px!important}
 .biz-investigacion-cta p{font-size:19px;font-weight:700}
 .biz-investigacion-cta a{display:inline-block;text-align:center}
 @media(max-width:760px){.biz-investigacion{padding:65px 16px}.biz-investigacion-grid{grid-template-columns:1fr}.biz-proyecto{padding:24px}.biz-investigacion-cta{flex-direction:column;text-align:center}.biz-estado{margin-left:0}}
+
+/* V23: navegación simple y galería de proyectos */
+.biz-oculto{display:none!important}
+.biz-proyectos-section{padding:100px 24px;background:#fff;scroll-margin-top:90px}
+.biz-proyectos-intro{text-align:center;max-width:800px;margin:0 auto 44px}
+.biz-proyectos-intro h2{font-size:clamp(38px,5.2vw,68px);line-height:1.06;letter-spacing:-2px;margin:12px 0 18px;color:#171717}
+.biz-proyectos-intro>p:last-child{font-size:18px;line-height:1.6;color:#666}
+.biz-proyectos-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.biz-proyectos-card{border:1px solid #eee;border-radius:26px;overflow:hidden;background:#fff;box-shadow:0 16px 50px rgba(0,0,0,.045);transition:transform .2s,box-shadow .2s}
+.biz-proyectos-card:hover{transform:translateY(-4px);box-shadow:0 22px 60px rgba(0,0,0,.09)}
+.biz-proyectos-card img{display:block;width:100%;height:250px;object-fit:cover;background:#f5f5f7}
+.biz-proyectos-content{padding:26px 30px 32px}
+.biz-proyectos-status{display:inline-block;border-radius:999px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:.2px}
+.biz-proyectos-status.listo{background:#e9f7ee;color:#216b43}
+.biz-proyectos-status.desarrollo{background:#fff1e3;color:#955b1c}
+.biz-proyectos-content h3{font-size:27px;letter-spacing:-.7px;margin:16px 0 10px;color:#171717}
+.biz-proyectos-content p{font-size:16px;line-height:1.65;color:#666;min-height:78px}
+.biz-proyectos-content a{display:inline-block;margin-top:15px;color:#cf1722;font-weight:750;text-decoration:none}
+.biz-proyectos-content a:hover{text-decoration:underline}
+#servicios,#nosotros,#contacto{scroll-margin-top:85px}
+@media(max-width:700px){.biz-proyectos-section{padding:72px 16px}.biz-proyectos-grid{grid-template-columns:1fr;gap:20px}.biz-proyectos-card img{height:210px}.biz-proyectos-content{padding:22px}.biz-proyectos-content p{min-height:0}}
