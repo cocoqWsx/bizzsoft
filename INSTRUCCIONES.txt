@@ -1,0 +1,17 @@
+ACTUALIZACION BIZSOFT - IMAGEN Y PROYECTOS DE INVESTIGACION
+
+1. Descarga y descomprime este ZIP.
+2. Descarga el repositorio de GitHub como ZIP y descomprímelo (o usa git clone).
+3. Copia actualizar_bizsoft.py y logo-bizsoft-innovacion-v1.png a la raíz del proyecto (junto a manage.py).
+4. Abre una terminal en esa carpeta y ejecuta: python actualizar_bizsoft.py
+5. El script modifica SOLO:
+   web/templates/web/index.html
+   web/static/web/css/estilos.css
+   web/static/web/img/logo-bizsoft-innovacion-v1.png (nuevo)
+6. Sube esos TRES archivos a GitHub respetando las rutas; NO es necesario subir el script.
+7. Comprueba el deploy de Render y revisa la página en ordenador y móvil.
+
+No cambia Django settings.py, base de datos, asistente ni formulario de leads.
+No registra una marca ni garantiza exclusividad del diseño.
+El nuevo logo es una propuesta visual; comprueba posibles similitudes antes de usarlo comercialmente.
+No publiques detalles técnicos confidenciales de tus investigaciones.
