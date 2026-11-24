@@ -11,7 +11,6 @@ urlpatterns = [
     path("inteligencia-artificial-para-empresas/", views.pagina_seo, {"slug": "inteligencia-artificial-para-empresas"}, name="ia_empresas"),
     path("ciberseguridad-para-empresas/", views.pagina_seo, {"slug": "ciberseguridad-para-empresas"}, name="ciberseguridad_empresas"),
     path("software-para-talleres/", views.pagina_seo, {"slug": "software-para-talleres"}, name="software_talleres"),
-    path("api/asistente/", views.asistente, name="asistente"),
     path("api/lead/", views.captar_lead, name="captar_lead"),
     path("webhooks/whatsapp/", views.whatsapp_webhook, name="whatsapp_webhook"),
 ]

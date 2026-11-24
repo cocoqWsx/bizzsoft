@@ -1,0 +1,16 @@
+BIZSOFT V25 - ASISTENTE ÚNICO EN WHATSAPP
+
+CAMBIOS
+- Se retiró el chat/asistente conversacional incrustado en la página de inicio.
+- Se eliminó la llamada del navegador a /api/asistente/.
+- Los botones de contacto principales abren directamente WhatsApp con un mensaje inicial.
+- Los botones de consulta por sector y demos que tenían data-pregunta ahora abren WhatsApp con el contexto de la consulta.
+- Se quitó la tarjeta de demo del asistente empresarial para no anunciar dos asistentes.
+- Se mantiene el formulario de contacto como alternativa no conversacional.
+- Se mantiene el webhook Django de WhatsApp Cloud API preparado en versiones anteriores.
+
+NÚMERO PÚBLICO CONFIGURADO
++51 978 778 434
+
+IMPORTANTE
+El botón abre WhatsApp directamente. Las respuestas automáticas requieren completar la configuración de Meta WhatsApp Cloud API y las variables privadas WA_PHONE_NUMBER_ID, WA_ACCESS_TOKEN, WA_APP_SECRET y WA_VERIFY_TOKEN en Render.

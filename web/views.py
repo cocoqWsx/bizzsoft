@@ -69,12 +69,6 @@ def sitemap_xml(request):
 
 
 @require_POST
-def asistente(request):
-    data = json.loads(request.body.decode("utf-8"))
-    return JsonResponse(responder(data.get("consulta", ""), data.get("estado") or {}))
-
-
-@require_POST
 def captar_lead(request):
     data = json.loads(request.body.decode("utf-8"))
     nombre = (data.get("nombre") or "").strip(); email = (data.get("email") or "").strip()

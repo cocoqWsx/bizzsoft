@@ -430,3 +430,7 @@ footer{background:#fff!important;color:#202124!important;border-top:1px solid #f
 .whatsapp-flotante:hover { color:#fff; transform:translateY(-3px); box-shadow:0 12px 28px rgba(0,0,0,.24); }
 .whatsapp-flotante-icono { font-size:23px; line-height:1; }
 @media(max-width:600px) { .whatsapp-flotante { right:14px; bottom:14px; padding:12px 15px; } }
+
+
+/* V25: ya no existe chat embebido; WhatsApp es el único asistente conversacional. */
+.asistente-box, .cta-implementar { display: none !important; }
