@@ -1,0 +1,13 @@
+BIZZSOFT V24 — ENFOQUE MULTISECTORIAL
+
+- Se conserva el proyecto Django y su estructura de despliegue.
+- Se utiliza el escudo completo como identidad visual en cabecera y pie de página.
+- Se renueva la portada para presentar a BizSoft como empresa de tecnología e ingeniería para distintos sectores.
+- Se incorpora una fotografía original de profesionales trabajando entre oficina e industria.
+- Se reemplazan las ilustraciones planas de proyectos por fotografías locales para taller, ciberseguridad, finanzas e ingeniería.
+- Se amplían los servicios con ingeniería y mantenimiento, ventas y desarrollo comercial, IA, software, aplicaciones y ciberseguridad.
+- Se muestran sectores: comercio, construcción e ingeniería, industria, transporte, servicios técnicos, servicios profesionales e instituciones.
+- Se retiran los llamados principales a crear una app y se prioriza solicitar una solución para el negocio.
+- Las imágenes nuevas se guardan en web/static/web/img; no dependen de enlaces externos.
+
+NOTA: Las fotografías son ilustrativas de los tipos de solución. No deben interpretarse como evidencia de implementaciones o clientes reales.
