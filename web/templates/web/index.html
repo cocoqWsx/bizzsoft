@@ -117,6 +117,13 @@
 </main>
 <footer><div class="footer-marca"><img src="{% static 'web/img/bizsoft-escudo-principal.png' %}?v=1" alt="BizSoft"><div><h3>BizSoft</h3><p>Tecnología, ingeniería y seguridad para resolver problemas reales de negocio.</p></div></div><p>© 2026 BizSoft • Perú</p></footer>
 <script src="{% static 'web/js/main.js' %}"></script>
+
+{% if whatsapp_number %}
+<a class="whatsapp-flotante" href="https://wa.me/{{ whatsapp_number }}?text=Hola%20BizzSoft,%20quisiera%20informaci%C3%B3n%20sobre%20sus%20soluciones." target="_blank" rel="noopener noreferrer" aria-label="Contactar a BizzSoft por WhatsApp">
+  <span class="whatsapp-flotante-icono" aria-hidden="true">✆</span><span>Escríbenos por WhatsApp</span>
+</a>
+{% endif %}
+
 </body>
 </html>
 

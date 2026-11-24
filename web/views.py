@@ -1,5 +1,11 @@
 import json
+import hashlib
+import hmac
+import logging
+import os
+import requests
 from django.http import JsonResponse, HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from django.middleware.csrf import get_token
 from django.shortcuts import render
 from django.views.decorators.http import require_POST
@@ -7,7 +13,9 @@ from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
 from django.templatetags.static import static
 from .asistente import responder
-from .models import Lead
+from .models import Lead, WhatsAppSession
+
+logger = logging.getLogger(__name__)
 
 
 def inicio(request):
@@ -20,7 +28,13 @@ def inicio(request):
         "description": "Desarrollo de aplicaciones móviles para empresas, integradas con software, inteligencia artificial, automatización, datos y ciberseguridad.",
         "areaServed": {"@type": "Country", "name": "Perú"}
     }, ensure_ascii=False)
-    return render(request, "web/index.html", {"canonical_url": canonical_url, "social_image_url": social_image_url, "structured_data": structured_data})
+    whatsapp_number = "51978778434"  # Número público de contacto BizzSoft (Perú: +51)
+    return render(request, "web/index.html", {
+        "canonical_url": canonical_url,
+        "social_image_url": social_image_url,
+        "structured_data": structured_data,
+        "whatsapp_number": whatsapp_number,
+    })
 
 
 
@@ -142,3 +156,97 @@ def pagina_seo(request, slug):
     data = dict(page)
     data.update({"canonical_url": canonical_url, "social_image_url": social_image_url})
     return render(request, "web/servicio.html", data)
+
+
+# -------------------- WHATSAPP CLOUD API --------------------
+
+def _enviar_whatsapp(destinatario, texto):
+    """Envía una respuesta de texto usando WhatsApp Cloud API de Meta."""
+    phone_id = os.environ.get("WA_PHONE_NUMBER_ID", "").strip()
+    token = os.environ.get("WA_ACCESS_TOKEN", "").strip()
+    version = os.environ.get("WA_GRAPH_VERSION", "v26.0").strip()
+    if not phone_id or not token:
+        logger.error("Faltan WA_PHONE_NUMBER_ID o WA_ACCESS_TOKEN.")
+        return False
+    url = f"https://graph.facebook.com/{version}/{phone_id}/messages"
+    headers = {"Authorization": f"Bearer {token}", "Content-Type": "application/json"}
+    payload = {"messaging_product": "whatsapp", "recipient_type": "individual", "to": destinatario,
+               "type": "text", "text": {"preview_url": False, "body": texto[:4096]}}
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=15)
+        if response.status_code >= 400:
+            logger.error("WhatsApp API error %s: %s", response.status_code, response.text[:1000])
+            return False
+        return True
+    except requests.RequestException:
+        logger.exception("No se pudo conectar con WhatsApp Cloud API.")
+        return False
+
+
+def _firma_meta_valida(request):
+    """Comprueba X-Hub-Signature-256 con el App Secret de Meta."""
+    app_secret = os.environ.get("WA_APP_SECRET", "").strip()
+    firma = request.headers.get("X-Hub-Signature-256", "")
+    if not app_secret or not firma.startswith("sha256="):
+        return False
+    digest = hmac.new(app_secret.encode("utf-8"), request.body, hashlib.sha256).hexdigest()
+    return hmac.compare_digest(firma[7:], digest)
+
+
+def _texto_respuesta_bizsoft(resultado):
+    partes = [resultado.get("mensaje", "Gracias por escribir a BizzSoft.")]
+    detalle = resultado.get("detalle") or []
+    if detalle:
+        partes.append("\n".join(f"• {item}" for item in detalle))
+    opciones = resultado.get("opciones") or []
+    if opciones:
+        partes.append("También puedes consultar sobre:\n" + "\n".join(f"• {item}" for item in opciones))
+    partes.append("\nSi deseas una cotización, responde con tu nombre, empresa y qué solución necesitas.")
+    return "\n\n".join(partes)[:4096]
+
+
+@csrf_exempt
+def whatsapp_webhook(request):
+    """Webhook de Meta: GET valida la URL; POST recibe mensajes entrantes."""
+    if request.method == "GET":
+        verify_token = os.environ.get("WA_VERIFY_TOKEN", "")
+        mode = request.GET.get("hub.mode", "")
+        token = request.GET.get("hub.verify_token", "")
+        challenge = request.GET.get("hub.challenge", "")
+        if mode == "subscribe" and verify_token and hmac.compare_digest(token, verify_token):
+            return HttpResponse(challenge, content_type="text/plain")
+        return HttpResponse("Token de verificación incorrecto", status=403)
+    if request.method != "POST":
+        return HttpResponse(status=405)
+    if not _firma_meta_valida(request):
+        logger.warning("Webhook de WhatsApp rechazado: firma no válida o WA_APP_SECRET ausente.")
+        return HttpResponse("Firma no válida", status=403)
+    try:
+        payload = json.loads(request.body.decode("utf-8"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        return HttpResponse("JSON no válido", status=400)
+
+    for entry in payload.get("entry", []):
+        for change in entry.get("changes", []):
+            for message in change.get("value", {}).get("messages", []):
+                if message.get("type") != "text":
+                    continue
+                remitente = (message.get("from") or "").strip()
+                texto = (message.get("text") or {}).get("body", "").strip()
+                message_id = message.get("id", "")
+                if not remitente or not texto:
+                    continue
+                if message_id and WhatsAppSession.objects.filter(ultimo_message_id=message_id).exists():
+                    continue
+                session, _ = WhatsAppSession.objects.get_or_create(numero=remitente)
+                try:
+                    resultado = responder(texto, session.estado or {})
+                    session.estado = resultado.get("estado") or {}
+                    session.ultimo_message_id = message_id
+                    session.save(update_fields=["estado", "ultimo_message_id", "actualizado"])
+                    _enviar_whatsapp(remitente, _texto_respuesta_bizsoft(resultado))
+                except Exception:
+                    logger.exception("Error procesando mensaje de WhatsApp de %s", remitente)
+                    _enviar_whatsapp(remitente, "Gracias por contactar a BizzSoft. Tuvimos un inconveniente al procesar tu consulta. "
+                                     "Déjanos tu nombre y un resumen de lo que necesitas; nuestro equipo podrá revisarlo.")
+    return HttpResponse("EVENT_RECEIVED", status=200)

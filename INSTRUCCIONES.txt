@@ -15,3 +15,7 @@ No cambia Django settings.py, base de datos, asistente ni formulario de leads.
 No registra una marca ni garantiza exclusividad del diseño.
 El nuevo logo es una propuesta visual; comprueba posibles similitudes antes de usarlo comercialmente.
 No publiques detalles técnicos confidenciales de tus investigaciones.
+
+
+INTEGRACIÓN WHATSAPP AUTOMÁTICO
+Consulta WHATSAPP_BOT_SETUP.md para configurar WhatsApp Cloud API, variables de Render y webhook.
