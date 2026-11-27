@@ -48,15 +48,87 @@
 </section>
 
 
+
 <section class="biz-proyectos-section" id="proyectos" aria-labelledby="proyectos-titulo">
-  <div class="biz-proyectos-intro"><p class="v19-kicker">PROYECTOS BIZSOFT</p><h2 id="proyectos-titulo">Ideas que se convierten en herramientas útiles.</h2><p>Ejemplos de soluciones que podemos adaptar a empresas, profesionales, industria y organizaciones.</p></div>
-  <div class="biz-proyectos-grid">
-    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-taller-foto.jpg' %}" alt="Gestión y mantenimiento de un taller automotriz" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status listo">Terminado</span><h3>BizSoft Taller</h3><p>Aplicación para gestionar talleres mecánicos, clientes, vehículos, órdenes de trabajo y mantenimientos.</p><a href="https://wa.me/{{ whatsapp_number }}?text=Hola%20BizzSoft,%20quisiera%20informaci%C3%B3n%20sobre%20este%20proyecto." target="_blank" rel="noopener noreferrer">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
-    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-ciberseguridad-foto.jpg' %}" alt="Ciberseguridad y análisis de riesgos digitales" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status listo">Terminado</span><h3>BizSoft Antifraude IA</h3><p>Herramienta para analizar enlaces y sitios web e identificar posibles señales de fraude digital.</p><a href="https://wa.me/{{ whatsapp_number }}?text=Hola%20BizzSoft,%20quisiera%20informaci%C3%B3n%20sobre%20este%20proyecto." target="_blank" rel="noopener noreferrer">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
-    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-finanzas-foto.jpg' %}" alt="Análisis financiero y datos empresariales" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status desarrollo">En desarrollo</span><h3>BizSoft Finanzas IA</h3><p>Asistente inteligente para organizar ingresos, gastos, presupuestos y decisiones financieras.</p><a href="https://wa.me/{{ whatsapp_number }}?text=Hola%20BizzSoft,%20quisiera%20informaci%C3%B3n%20sobre%20este%20proyecto." target="_blank" rel="noopener noreferrer">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
-    <article class="biz-proyectos-card"><img src="{% static 'web/img/proyecto-ingenieria-foto.jpg' %}" alt="Análisis de información y gestión de proyectos" loading="lazy"><div class="biz-proyectos-content"><span class="biz-proyectos-status desarrollo">En desarrollo</span><h3>BizSoft Ingeniería</h3><p>Herramientas para seguimiento de proyectos, avances, presupuestos, materiales y reportes técnicos.</p><a href="https://wa.me/{{ whatsapp_number }}?text=Hola%20BizzSoft,%20quisiera%20informaci%C3%B3n%20sobre%20este%20proyecto." target="_blank" rel="noopener noreferrer">Consultar sobre este proyecto <span aria-hidden="true">→</span></a></div></article>
-  </div>
+
+    <div class="biz-proyectos-intro">
+        <p class="v19-kicker">PROYECTOS BIZSOFT</p>
+        <h2 id="proyectos-titulo">Proyectos</h2>
+        <p>Algunos ejemplos de soluciones que podemos adaptar a las necesidades de cada negocio y entidad.</p>
+    </div>
+
+    <!-- FILTROS DE PROYECTOS -->
+    <div class="biz-proyectos-filtros">
+        <button type="button" class="filtro-activo" data-filtro="todos">Todas</button>
+        <button type="button" data-filtro="tecnologia">Tecnología</button>
+        <button type="button" data-filtro="consultoria">Consultoría</button>
+        <button type="button" data-filtro="publicas">Entidades Públicas</button>
+        <button type="button" data-filtro="combinados">Combinados</button>
+    </div>
+
+    <!-- TARJETAS DE PROYECTOS -->
+    <div class="biz-proyectos-grid">
+
+        <article class="biz-proyectos-card" data-categoria="tecnologia">
+            <div class="biz-proyectos-video">
+                <img src="{% static 'web/img/proyecto-taller-foto.jpg' %}"
+                     alt="Sistema de gestión de talleres"
+                     loading="lazy">
+                <span class="biz-video-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="biz-proyectos-content">
+                <h3>BizSoft Taller</h3>
+                <p>Tecnología</p>
+            </div>
+        </article>
+
+        <article class="biz-proyectos-card" data-categoria="tecnologia">
+            <div class="biz-proyectos-video">
+                <img src="{% static 'web/img/proyecto-ciberseguridad-foto.jpg' %}"
+                     alt="Ciberseguridad y análisis de riesgos digitales"
+                     loading="lazy">
+                <span class="biz-video-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="biz-proyectos-content">
+                <h3>BizSoft Antifraude IA</h3>
+                <p>Tecnología</p>
+            </div>
+        </article>
+
+        <article class="biz-proyectos-card" data-categoria="tecnologia">
+            <div class="biz-proyectos-video">
+                <img src="{% static 'web/img/proyecto-finanzas-foto.jpg' %}"
+                     alt="Análisis financiero y datos empresariales"
+                     loading="lazy">
+                <span class="biz-video-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="biz-proyectos-content">
+                <h3>BizSoft Finanzas IA</h3>
+                <p>Tecnología</p>
+            </div>
+        </article>
+
+        <article class="biz-proyectos-card" data-categoria="combinados">
+            <div class="biz-proyectos-video">
+                <img src="{% static 'web/img/proyecto-ingenieria-foto.jpg' %}"
+                     alt="Ingeniería y gestión de proyectos"
+                     loading="lazy">
+                <span class="biz-video-play" aria-hidden="true">▶</span>
+            </div>
+            <div class="biz-proyectos-content">
+                <h3>BizSoft Ingeniería</h3>
+                <p>Combinados</p>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="biz-proyectos-mas">
+        <a href="#contacto">Ver todos los proyectos</a>
+    </div>
+
 </section>
+
 
 <section class="v19-intro" id="servicios">
   <div class="v19-intro-inner">
