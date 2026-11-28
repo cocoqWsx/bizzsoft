@@ -53,6 +53,34 @@ if (leadForm) {
  const cerrar=document.getElementById('predictor-cerrar'), calcular=document.getElementById('calcular-prediccion');
  const resultado=document.getElementById('predictor-resultado'), contacto=document.getElementById('predictor-contacto');
  if(!abrir||!modal) return;
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const filtros = document.querySelectorAll(".biz-proyectos-filtros button");
+    const tarjetas = document.querySelectorAll(".biz-proyectos-card");
+
+    filtros.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            const categoria = boton.dataset.filtro;
+
+            filtros.forEach(function (filtro) {
+                filtro.classList.remove("filtro-activo");
+            });
+
+            boton.classList.add("filtro-activo");
+
+            tarjetas.forEach(function (tarjeta) {
+                const mostrar =
+                    categoria === "todos" ||
+                    tarjeta.dataset.categoria === categoria;
+
+                tarjeta.style.display = mostrar ? "" : "none";
+            });
+        });
+    });
+});
+
+    
  const close=()=>{modal.hidden=true;document.body.style.overflow=''};
  abrir.addEventListener('click',()=>{modal.hidden=false;document.body.style.overflow='hidden'});
  cerrar.addEventListener('click',close); modal.addEventListener('click',e=>{if(e.target===modal) close()});
